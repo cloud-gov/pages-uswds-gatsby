@@ -1,7 +1,13 @@
 {
-  "name": "gatsby-federalist-example",
-  "description": "Gatsby on Federalist Example",
-  "license": "MIT",
+  "name": "federalist-gatsby-uswds-template",
+  "description": "Description A template for Federalist that uses Gatsby and USWDS 2.0",
+  "license": "CC0-1.0",
+  "version": "0.1.0",
+  "author": "davemcorwin",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/18f/federalist-gatsby-uswds-template.git"
+  },
   "scripts": {
     "develop": "gatsby develop",
     "start": "npm run develop",

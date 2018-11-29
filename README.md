@@ -1,12 +1,6 @@
-# gatsby-starter-hello-world
-Starter with the bare essentials needed for a [Gatsby](https://www.gatsbyjs.org/) site.
+# Federalist template using Gatsby and USWDS 2.0
 
-Install this starter (assuming Gatsby is installed) by running from your CLI:
-```
-gatsby new gatsby-site https://github.com/gatsbyjs/gatsby-starter-hello-world
-```
-
-Or [view the live demo here](https://gatsby-starter-hello-world-demo.netlify.com/).
+## Extremely experimental and in progress...
 
 ## Running in development
-`gatsby develop`
+`gatsby develop` or `npm run develop`
