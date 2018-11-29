@@ -1,10 +1,11 @@
 import React from "react"
 import Layout from "../components/layout"
 import circle from "../images/uswds/circle-124.png"
+import styles from "./index.module.css"
 
 export default () => (
   <Layout>
-    <section className="usa-hero">
+    <section className={`usa-hero ${styles.hero}`}>
       <div className="grid-container">
         <div className="usa-hero-callout">
           <h2 className="usa-hero-heading">
