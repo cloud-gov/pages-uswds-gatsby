@@ -67,7 +67,7 @@ export default () => (
           </ul>
           <form className="usa-search usa-search-small ">
             <div role="search">
-              <label className="usa-sr-only" for="extended-search-field-small">Search small</label>
+              <label className="usa-sr-only" htmlFor="extended-search-field-small">Search small</label>
               <input className="usa-input" id="extended-search-field-small" type="search" name="search"/>
               <button className="usa-button" type="submit">
                 <span className="usa-sr-only">Search</span>
