@@ -1,6 +1,6 @@
 {
-  "name": "gatsby-starter-hello-world",
-  "description": "Gatsby hello world starter",
+  "name": "gatsby-federalist-example",
+  "description": "Gatsby on Federalist Example",
   "license": "MIT",
   "scripts": {
     "develop": "gatsby develop",
@@ -12,6 +12,7 @@
   "dependencies": {
     "gatsby": "^2.0.33",
     "react": "^16.5.1",
-    "react-dom": "^16.5.1"
+    "react-dom": "^16.5.1",
+    "uswds": "^2.0.0-beta.4"
   }
 }
