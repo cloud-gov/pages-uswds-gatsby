@@ -13,7 +13,7 @@
     "start": "npm run develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "federalist": "npm run build"
+    "federalist": "npm run build --prefix-paths"
   },
   "dependencies": {
     "classnames": "^2.2.6",
