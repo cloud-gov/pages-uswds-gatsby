@@ -1,5 +1,4 @@
 import React from 'react';
-import 'uswds_polyfills';
 import { Banner, SkipNav } from 'uswds-react';
 import './layout.css';
 import Header from './header';
