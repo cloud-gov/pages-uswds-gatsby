@@ -1,17 +1,19 @@
-import React from "react"
-import "./layout.css"
-import Banner from "./banner"
-import Header from "./header"
+import React from 'react';
+import 'uswds_polyfills';
+import { Banner, SkipNav } from 'uswds-react';
+import './layout.css';
+import Header from './header';
 
-export default ({ children }) => (
+const mainContent = 'main-content';
+
+const Layout = ({ children }) => (
   <div>
-    <a className="usa-skipnav" href="#main-content">Skip to main content</a>
-    <Banner/>
-    <div className="usa-overlay"></div>
-    <Header/>
-
-    <main id="main-content">
-      {children}
-    </main>
+    <SkipNav skipsTo={mainContent} />
+    <Banner />
+    <div className="usa-overlay" />
+    <Header />
+    <main id={mainContent}>{children}</main>
   </div>
-)
+);
+
+export default Layout;

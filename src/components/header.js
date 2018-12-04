@@ -1,81 +1,98 @@
-import React from "react"
-import close from "../images/uswds/close.svg"
+import React from 'react';
+import close from 'uswds_images/close.svg';
+import {
+  Accordion,
+  AccordionButton,
+  AccordionContent,
+  Navigation,
+  Search,
+} from 'uswds-react';
 
-export default () => (
+const Header = () => (
   <header className="usa-header usa-header-extended" role="banner">
     <div className="usa-navbar">
       <div className="usa-logo" id="extended-logo">
         <em className="usa-logo-text">
-          <a href="/" title="Home" aria-label="Home">Project title</a>
+          <a href="/" title="Home" aria-label="Home">
+            Project title
+          </a>
         </em>
       </div>
       <button className="usa-menu-btn">Menu</button>
     </div>
 
-    <nav role="navigation" className="usa-nav">
+    <Navigation>
       <div className="usa-nav-inner">
         <button className="usa-nav-close">
-          <img src={close} alt="close"/>
+          <img src={close} alt="close" />
         </button>
-        <ul className="usa-nav-primary usa-accordion">
+        <Accordion className="usa-nav-primary" tag="ul">
           <li className="usa-nav-primary-item">
-            <button className="usa-accordion-button usa-nav-link usa-current" aria-expanded="false" aria-controls="extended-nav-section-one">
+            <AccordionButton
+              className="usa-nav-link usa-current"
+              controls="extended-nav-section-one"
+            >
               <span>Current section</span>
-            </button>
-            <ul id="extended-nav-section-one" className="usa-nav-submenu">
+            </AccordionButton>
+            <AccordionContent
+              id="extended-nav-section-one"
+              tag="ul"
+              className="usa-nav-submenu"
+            >
               <li className="usa-nav-submenu-item">
-                <a href="#">Navigation link</a>
+                <a href="/">Navigation link</a>
               </li>
               <li className="usa-nav-submenu-item">
-                <a href="#">Navigation link</a>
+                <a href="/">Navigation link</a>
               </li>
               <li className="usa-nav-submenu-item">
-                <a href="#">Navigation link</a>
+                <a href="/">Navigation link</a>
               </li>
-            </ul>
+            </AccordionContent>
           </li>
           <li className="usa-nav-primary-item">
-            <button className="usa-accordion-button usa-nav-link" aria-expanded="false" aria-controls="extended-nav-section-two">
+            <AccordionButton
+              className="usa-nav-link"
+              controls="extended-nav-section-two"
+            >
               <span>Section</span>
-            </button>
-            <ul id="extended-nav-section-two" className="usa-nav-submenu">
+            </AccordionButton>
+            <AccordionContent
+              id="extended-nav-section-two"
+              tag="ul"
+              className="usa-nav-submenu"
+            >
               <li className="usa-nav-submenu-item">
-                <a href="#">Navigation link</a>
+                <a href="/">Navigation link</a>
               </li>
               <li className="usa-nav-submenu-item">
-                <a href="#">Navigation link</a>
+                <a href="/">Navigation link</a>
               </li>
               <li className="usa-nav-submenu-item">
-                <a href="#">Navigation link</a>
+                <a href="/">Navigation link</a>
               </li>
-            </ul>
+            </AccordionContent>
           </li>
           <li className="usa-nav-primary-item">
-            <a className="usa-nav-link" href="javascript:void(0)">
+            <a className="usa-nav-link" href="/">
               <span>Simple link</span>
             </a>
           </li>
-        </ul>
+        </Accordion>
         <div className="usa-nav-secondary">
           <ul className="usa-nav-secondary-links">
             <li className="usa-nav-secondary-item">
-              <a href="">Secondary link</a>
+              <a href="/">Secondary link</a>
             </li>
             <li className="usa-nav-secondary-item">
-              <a href="">Another secondary link</a>
+              <a href="/">Another secondary link</a>
             </li>
           </ul>
-          <form className="usa-search usa-search-small ">
-            <div role="search">
-              <label className="usa-sr-only" htmlFor="extended-search-field-small">Search small</label>
-              <input className="usa-input" id="extended-search-field-small" type="search" name="search"/>
-              <button className="usa-button" type="submit">
-                <span className="usa-sr-only">Search</span>
-              </button>
-            </div>
-          </form>
+          <Search small />
         </div>
       </div>
-    </nav>
+    </Navigation>
   </header>
-)
+);
+
+export default Header;
