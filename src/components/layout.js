@@ -10,7 +10,7 @@ const Layout = ({ children }) => (
     <SkipNav skipsTo={mainContent} />
     <Banner />
     <div className="usa-overlay" />
-    <Header />
+    <Header title="Project title" />
     <main id={mainContent}>{children}</main>
   </div>
 );

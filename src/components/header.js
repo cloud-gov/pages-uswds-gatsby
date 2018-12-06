@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import close from 'uswds_images/close.svg';
 import {
   Accordion,
@@ -6,21 +7,15 @@ import {
   AccordionContent,
   Navigation,
   Search,
+  Header as UswdsHeader,
 } from 'uswds-react';
 
-const Header = () => (
-  <header className="usa-header usa-header-extended" role="banner">
-    <div className="usa-navbar">
-      <div className="usa-logo" id="extended-logo">
-        <em className="usa-logo-text">
-          <a href="/" title="Home" aria-label="Home">
-            Project title
-          </a>
-        </em>
-      </div>
-      <button className="usa-menu-btn">Menu</button>
-    </div>
+const propTypes = {
+  title: PropTypes.string.isRequired,
+};
 
+const Header = ({ title }) => (
+  <UswdsHeader title={title} extended>
     <Navigation>
       <div className="usa-nav-inner">
         <button className="usa-nav-close">
@@ -92,7 +87,9 @@ const Header = () => (
         </div>
       </div>
     </Navigation>
-  </header>
+  </UswdsHeader>
 );
+
+Header.propTypes = propTypes;
 
 export default Header;
