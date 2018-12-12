@@ -4,6 +4,8 @@ import cx from 'classnames';
 import { navigation } from 'uswds_components';
 import UswdsComponent from './uswds_component';
 
+const ROOT_CLASS = 'usa-header';
+
 const propTypes = {
   className: PropTypes.string,
   children: PropTypes.node,
@@ -18,6 +20,7 @@ const defaultProps = {
 };
 
 const propsToClasses = props => ({
+  [ROOT_CLASS]: true,
   'usa-header-basic': !props.extended,
   'usa-header-basic-megamenu': props.mega && !props.extended,
   'usa-header-extended': props.extended,
@@ -26,7 +29,7 @@ const propsToClasses = props => ({
 const Header = ({ className, children, ...props }) => {
   const render = ref => (
     <header
-      className={cx('usa-header', propsToClasses(props), className)}
+      className={cx(propsToClasses(props), className)}
       role="banner"
       ref={ref}
     >
