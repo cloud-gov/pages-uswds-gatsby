@@ -13,6 +13,19 @@ const Layout = ({ children }) => (
         site {
           siteMetadata {
             title
+            header {
+              navigation {
+                title
+                items {
+                  text
+                  link
+                }
+              }
+              secondaryLinks {
+                text
+                link
+              }
+            }
           }
         }
       }
@@ -22,7 +35,7 @@ const Layout = ({ children }) => (
         <SkipNav skipsTo={mainContent} />
         <Banner />
         <div className="usa-overlay" />
-        <Header title={data.site.siteMetadata.title} />
+        <Header {...data.site.siteMetadata} />
         <main id={mainContent}>{children}</main>
       </div>
     )}
