@@ -30,7 +30,7 @@ module.exports = {
     },
   },
   // Note: it must *not* have a trailing slash.
-  pathPrefix: process.env.BASEURL || '',
+  pathPrefix: process.env.BASEURL || '/',
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
