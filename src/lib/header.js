@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'gatsby';
 import cx from 'classnames';
 import { navigation } from 'uswds_components';
 import UswdsComponent from './uswds_component';
@@ -36,9 +37,9 @@ const Header = ({ className, children, ...props }) => {
       <div className="usa-navbar">
         <div className="usa-logo" id="extended-logo">
           <em className="usa-logo-text">
-            <a href="/" title="Home" aria-label="Home">
+            <Link to="/" title="Home" aria-label="Home">
               {props.title}
-            </a>
+            </Link>
           </em>
         </div>
         <button className="usa-menu-btn">Menu</button>
