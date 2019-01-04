@@ -1,15 +1,20 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
+import Img from 'gatsby-image';
 import chunk from 'lodash/fp/chunk';
 import circle from 'uswds_images/circle-124.png';
 import Layout from '../components/layout';
 
 const Index = ({ data }) => {
   const { callout, media, section, tagline } = data.dataYaml;
-
   return (
     <Layout>
       <section className="usa-hero">
+        <Img
+          fluid={data.file.childImageSharp.fluid}
+          className="usa-hero-image"
+          fadeIn={false}
+        />
         <div className="grid-container">
           <div className="usa-hero-callout">
             <h2 className="usa-hero-heading">{callout.title}</h2>
@@ -69,6 +74,13 @@ const Index = ({ data }) => {
 
 export const query = graphql`
   query IndexQuery {
+    file(relativePath: { eq: "images/hero.png" }) {
+      childImageSharp {
+        fluid(maxHeight: 400) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
     dataYaml(page: { eq: "index" }) {
       callout {
         title
