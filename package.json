@@ -18,7 +18,10 @@
   "dependencies": {
     "classnames": "^2.2.6",
     "gatsby": "^2.0.33",
+    "gatsby-image": "^2.0.25",
+    "gatsby-plugin-sharp": "^2.0.17",
     "gatsby-source-filesystem": "^2.0.12",
+    "gatsby-transformer-sharp": "^2.1.10",
     "gatsby-transformer-yaml": "^2.1.6",
     "lodash": "^4.17.11",
     "prop-types": "^15.6.2",
