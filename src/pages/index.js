@@ -74,7 +74,7 @@ const Index = ({ data }) => {
 
 export const query = graphql`
   query IndexQuery {
-    file(relativePath: { eq: "images/hero.png" }) {
+    file(base: { eq: "hero.png" }) {
       childImageSharp {
         fluid(maxHeight: 400) {
           ...GatsbyImageSharpFluid
