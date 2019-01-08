@@ -12,3 +12,16 @@
   width: 100%;
   height: 100%;
 }
+
+.spending-agency__header {
+  margin-bottom: '0';
+}
+
+.spending-agency__p {
+  margin-top: 0;
+}
+
+.spending-agency__amount {
+  font-size: 10rem;
+  width: 100%;
+}
