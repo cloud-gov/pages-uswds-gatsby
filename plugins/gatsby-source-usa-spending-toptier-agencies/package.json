@@ -1,14 +1,14 @@
 {
   "name": "gatsby-source-usa-spending-toptier-agencies",
   "version": "1.0.0",
-  "description": "",
+  "description": "An example source plugin to fetch a subset of data from the USASpending.gov API",
   "main": "gatsby-node.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "davemcorwin",
+  "license": "CC0-1.0",
   "dependencies": {
     "node-fetch": "^2.3.0"
   }
