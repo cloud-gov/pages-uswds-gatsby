@@ -26,7 +26,7 @@ module.exports = {
           ],
         },
         {
-          items: [{ text: 'Simple link', link: '/' }],
+          items: [{ text: 'Agency Spending', link: '/spending' }],
         },
       ],
     },
@@ -48,6 +48,7 @@ module.exports = {
         path: path.join(__dirname, `src`, `images`),
       },
     },
+    `gatsby-source-usa-spending-toptier-agencies`,
     `gatsby-transformer-yaml`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
