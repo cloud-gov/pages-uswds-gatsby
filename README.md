@@ -35,11 +35,11 @@ Federalist _can_ build any javascript application that generates a site, but the
 - [x] local yaml file [index.yml](https://github.com/18F/federalist-gatsby-uswds-template/blob/master/src/data/index.yml)
 - [x] local Gatsby configuration [gatsby-config.js](https://github.com/18F/federalist-gatsby-uswds-template/blob/master/gatsby-config.js#L3)
 - [ ] local markdown file
-- [ ] remote api (Cloud.gov)
+- [x] remote api (USASpending.gov)
 
 #### Other
 
-- [ ] Use [Gatsby Image](https://www.gatsbyjs.org/packages/gatsby-image/) to display optimized images
+- [x] Use [Gatsby Image](https://www.gatsbyjs.org/packages/gatsby-image/) to display optimized images
 
 ### USWDS and Gatsby/React
 
