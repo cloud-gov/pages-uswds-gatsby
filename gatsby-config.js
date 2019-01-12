@@ -37,6 +37,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        path: path.join(__dirname, `src`, `markdown`),
+        name: "markdown-pages",
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: 'data',
         path: path.join(__dirname, `src`, `data`),
       },
@@ -48,6 +55,7 @@ module.exports = {
         path: path.join(__dirname, `src`, `images`),
       },
     },
+    `gatsby-transformer-remark`,
     `gatsby-source-usa-spending-toptier-agencies`,
     `gatsby-transformer-yaml`,
     `gatsby-transformer-sharp`,
