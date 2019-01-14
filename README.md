@@ -13,8 +13,9 @@ Local development is no different than any other Gatsby application.
 - `git clone git@github.com:18F/federalist-gatsby-uswds-template.git`
 - `npm install`
 - `npm run develop` and the site will be viewable at localhost:8000
-
-*Note: If you want a completely new output of your static assets and files using `npm run build`, don't forget to delete both the `public` and `.cache` directories.*
+- `npm run build` builds the static site and assets in the `public/` directory
+- `npm run serve` serves the built static files at `http://localhost:9000`
+- `npm run clean` removes the built static file directories `.cache/` and `public/`
 
 ## Why
 
