@@ -14,6 +14,8 @@ Local development is no different than any other Gatsby application.
 - `npm install`
 - `npm run develop` and the site will be viewable at localhost:8000
 
+*Note: If you want a completely new output of your static assets and files using `npm run build`, don't forget to delete both the `public` and `.cache` directories.*
+
 ## Why
 
 Federalist supports sites generated using `node` but the documentation, examples, and experience of most users involve using [Jekyll](https://jekyllrb.com/). Meanwhile, Gatsby is a great fit for many government static sites as it allows for disparate data sources and uses React while the USWDS provides a wonderful foundation for building beautiful, 508-compliant sites. Currently, using USWDS with React takes a little bit of effort, so using them together here them demonstrates the possibility of doing so while acting as a testbed for future changes in USWDS to make this pairing easier in the future.
