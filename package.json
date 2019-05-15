@@ -8,6 +8,9 @@
     "type": "git",
     "url": "git://github.com/18f/federalist-gatsby-uswds-template.git"
   },
+  "engines": {
+    "node": ">=8.0.0 <11.0.0"
+  },
   "scripts": {
     "clean": "rimraf .cache public",
     "develop": "gatsby develop",
