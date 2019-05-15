@@ -8,7 +8,7 @@ This is a working example of deploying a [Gatsby](https://www.gatsbyjs.org/) and
 
 ## Local Development
 
-Local development is no different than any other Gatsby application.
+Local development is no different than any other Gatsby application. Node v8.x or 10.x is recommended.
 
 - `git clone git@github.com:18F/federalist-gatsby-uswds-template.git`
 - `npm install`
