@@ -29,13 +29,13 @@ const Spending = ({ data, location }) => {
             <aside className="usa-layout-docs-sidenav desktop:grid-col-3">
               <nav>
                 <ul className="usa-sidenav">
-                  <li className="usa-sidenav-item">
+                  <li className="usa-sidenav__item">
                     <Link to="spending" activeClassName="usa-current">
                       Agencies
                     </Link>
-                    <ul className="usa-sidenav-sublist">
+                    <ul className="usa-sidenav__sublist">
                       {agencies.map((agency, idx) => (
-                        <li key={idx} className="usa-sidenav-item">
+                        <li key={idx} className="usa-sidenav__item">
                           <Link
                             to={`spending#agency-${agency.agency_id}`}
                             className={

@@ -19,7 +19,7 @@ const AccordionContent = ({ className, id, defaultHidden, tag, children }) =>
   React.createElement(
     tag,
     {
-      className: cx('usa-accordion-content', className),
+      className: cx('usa-accordion__content', className),
       id: id,
       hidden: defaultHidden,
     },

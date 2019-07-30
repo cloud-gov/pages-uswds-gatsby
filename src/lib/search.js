@@ -20,7 +20,7 @@ const fieldName = 'extended-search-field-small'; // should generate something pa
 const Search = ({ big, className, small, srText }) => {
   const classNames = cx(
     'usa-search',
-    { 'usa-search-small': small, 'usa-search-big': big },
+    { 'usa-search--small': small, 'usa-search--big': big },
     className
   );
 

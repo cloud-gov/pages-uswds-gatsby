@@ -5,7 +5,7 @@
   position: relative;
 }
 
-.usa-hero-image {
+.usa-hero__image {
   position: absolute !important;
   top: 0;
   z-index: -1;
