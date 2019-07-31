@@ -20,7 +20,7 @@ const AccordionButton = ({
   children,
 }) => (
   <button
-    className={cx('usa-accordion-button', className)}
+    className={cx('usa-accordion__button', className)}
     aria-expanded={defaultExpanded ? 'true' : 'false'}
     aria-controls={controls}
   >

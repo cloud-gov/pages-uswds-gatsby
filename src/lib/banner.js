@@ -18,42 +18,42 @@ const Banner = ({ className }) => {
   const render = ref => (
     <div className={cx('usa-banner', className)} ref={ref}>
       <Accordion>
-        <header className="usa-banner-header">
-          <div className="usa-banner-inner">
+        <header className="usa-banner__header">
+          <div className="usa-banner__inner">
             <div className="grid-col-auto">
               <img
-                className="usa-banner-header-flag"
+                className="usa-banner__header-flag"
                 src={flag}
                 alt="U.S. flag"
               />
             </div>
             <div className="grid-col-fill tablet:grid-col-auto">
-              <p className="usa-banner-header-text">
+              <p className="usa-banner__header-text">
                 An official website of the United States government
               </p>
-              <p className="usa-banner-header-action" aria-hidden="true">
+              <p className="usa-banner__header-action" aria-hidden="true">
                 Here’s how you know
               </p>
             </div>
             <AccordionButton
               controls="gov-banner"
-              className="usa-banner-button"
+              className="usa-banner__button"
             >
-              <span className="usa-banner-button-text">
+              <span className="usa-banner__button-text">
                 Here's how you know
               </span>
             </AccordionButton>
           </div>
         </header>
-        <AccordionContent id="gov-banner" className="usa-banner-content">
+        <AccordionContent id="gov-banner" className="usa-banner__content">
           <div className="grid-row grid-gap-lg">
-            <div className="usa-banner-guidance-gov tablet:grid-col-6">
+            <div className="usa-banner__guidance-gov tablet:grid-col-6">
               <img
-                className="usa-banner-icon usa-media_block-img"
+                className="usa-banner__icon usa-media-block__img"
                 src={dotGov}
                 alt="Dot gov"
               />
-              <div className="usa-media_block-body">
+              <div className="usa-media-block__body">
                 <p>
                   <strong>The .gov means it’s official.</strong>
                   <br />
@@ -63,13 +63,13 @@ const Banner = ({ className }) => {
                 </p>
               </div>
             </div>
-            <div className="usa-banner-guidance-ssl tablet:grid-col-6">
+            <div className="usa-banner__guidance-ssl tablet:grid-col-6">
               <img
-                className="usa-banner-icon usa-media_block-img"
+                className="usa-banner__icon usa-media-block__img"
                 src={https}
                 alt="Https"
               />
-              <div className="usa-media_block-body">
+              <div className="usa-media-block__body">
                 <p>
                   <strong>The site is secure.</strong>
                   <br />
