@@ -4,7 +4,7 @@ This is a working example of deploying a [Gatsby](https://www.gatsbyjs.org/) and
 
 ## See It Live
 
-[Click Me](https://federalist-proxy.app.cloud.gov/site/18f/federalist-gatsby-uswds-gatsby/)
+[Click Me](https://federalist-proxy.app.cloud.gov/site/18f/federalist-uswds-gatsby/)
 
 ## Local Development
 
