@@ -48,6 +48,12 @@ module.exports = {
         path: path.join(__dirname, `src`, `images`),
       },
     },
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        defaultLayouts: { default: path.resolve('./src/components/sub-page.js') },
+      },
+    },
     `gatsby-source-usa-spending-toptier-agencies`,
     `gatsby-transformer-yaml`,
     `gatsby-transformer-sharp`,

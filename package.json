@@ -20,9 +20,12 @@
     "federalist": "npm run build -- --prefix-paths"
   },
   "dependencies": {
+    "@mdx-js/mdx": "^1.5.5",
+    "@mdx-js/react": "^1.5.5",
     "classnames": "^2.2.6",
     "gatsby": "^2.13.35",
     "gatsby-image": "^2.2.7",
+    "gatsby-plugin-mdx": "^1.0.68",
     "gatsby-plugin-sharp": "^2.2.9",
     "gatsby-source-filesystem": "^2.1.6",
     "gatsby-transformer-sharp": "^2.2.5",
