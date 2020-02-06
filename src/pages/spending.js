@@ -12,6 +12,7 @@ const formatCurrency = number => {
   const inBillions = Math.round(number / oneBillion);
   // Not sure why maximumFractionDigits doesn't like a value of 0
   // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat
+  //eslint-disable-next-line no-unused-vars
   const [integerOnly, _] = currencyFormat.format(inBillions).split('.');
   return integerOnly;
 };

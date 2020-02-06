@@ -21,20 +21,20 @@
   },
   "dependencies": {
     "classnames": "^2.2.6",
-    "gatsby": "^2.13.35",
-    "gatsby-image": "^2.2.7",
-    "gatsby-plugin-sharp": "^2.2.9",
-    "gatsby-source-filesystem": "^2.1.6",
-    "gatsby-transformer-sharp": "^2.2.5",
-    "gatsby-transformer-yaml": "^2.2.4",
+    "gatsby": "^2.19.12",
+    "gatsby-image": "^2.2.40",
+    "gatsby-plugin-sharp": "^2.4.5",
+    "gatsby-source-filesystem": "^2.1.48",
+    "gatsby-transformer-sharp": "^2.3.14",
+    "gatsby-transformer-yaml": "^2.2.24",
     "lodash": "^4.17.15",
-    "prop-types": "^15.6.2",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "uswds": "^2.0.3"
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "uswds": "^2.4.0"
   },
   "devDependencies": {
-    "prettier": "^1.15.3",
-    "rimraf": "^2.6.3"
+    "prettier": "^1.19.1",
+    "rimraf": "^2.7.1"
   }
 }
