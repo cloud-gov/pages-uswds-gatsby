@@ -1,45 +1,61 @@
+/**
+ * Layout component that queries for data
+ * with Gatsby's useStaticQuery component
+ *
+ * See: https://www.gatsbyjs.org/docs/use-static-query/
+ */
+
 import React from 'react';
-import { StaticQuery, graphql } from 'gatsby';
-import { Banner, SkipNav } from 'uswds-react';
-import './layout.css';
+import PropTypes from 'prop-types';
+import { useStaticQuery, graphql } from 'gatsby';
+
+import Banner from './banner';
+import Footer from './footer';
 import Header from './header';
+import Nav from './nav';
 
-const mainContent = 'main-content';
-
-const Layout = ({ children }) => (
-  <StaticQuery
-    query={graphql`
-      query {
-        site {
-          siteMetadata {
+const Layout = ({ children }) => {
+  const data = useStaticQuery(graphql`
+    query SiteTitleQuery {
+      site {
+        siteMetadata {
+          title
+          navigation {
             title
-            header {
-              navigation {
-                title
-                items {
-                  text
-                  link
-                }
-              }
-              secondaryLinks {
-                text
-                link
-              }
+            items {
+              text
+              link
             }
+          }
+          secondaryLinks {
+            text
+            link
           }
         }
       }
-    `}
-    render={data => (
-      <div>
-        <SkipNav skipsTo={mainContent} />
-        <Banner />
-        <div className="usa-overlay" />
-        <Header {...data.site.siteMetadata} />
-        <main id={mainContent}>{children}</main>
-      </div>
-    )}
-  />
-);
+    }
+  `);
+
+  const { title, navigation, secondaryLinks } = data.site.siteMetadata;
+
+  return (
+    <>
+      <a className="usa-skipnav" href="#main-content">
+        Skip to main content
+      </a>
+      <Banner />
+      <div className="usa-overlay" />
+      <Header siteTitle={title}>
+        <Nav {...{ navigation, secondaryLinks }} />
+      </Header>
+      <main id="main-content">{children}</main>
+      <Footer />
+    </>
+  );
+};
+
+Layout.propTypes = {
+  children: PropTypes.node.isRequired,
+};
 
 export default Layout;

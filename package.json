@@ -1,40 +1,37 @@
 {
-  "name": "federalist-gatsby-uswds-template",
-  "description": "Description A template for Federalist that uses Gatsby and USWDS 2.0",
-  "license": "CC0-1.0",
-  "version": "0.1.0",
-  "author": "davemcorwin",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/18f/federalist-gatsby-uswds-template.git"
-  },
-  "engines": {
-    "node": ">=8.0.0 <11.0.0"
-  },
+  "name": "federalist-uswds-gatsby2",
+  "description": "A Federalist template using USWDS 2.0 + Gatsby",
+  "version": "1.0.0",
   "scripts": {
-    "clean": "rimraf .cache public",
-    "develop": "gatsby develop",
-    "start": "npm run develop",
+    "clean": "rimraf .cache public _site",
     "build": "gatsby build",
+    "reset": "npx rimraf package-lock.json LICENSE.md CONTRIBUTING.md degit.json .git",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "start": "npm run develop",
     "serve": "gatsby serve",
-    "federalist": "npm run build -- --prefix-paths"
+    "federalist": "npm run federalist:build && npm run federalist:copy",
+    "federalist:build": "gatsby build --prefix-paths",
+    "federalist:copy": "mkdir -p _site && rm -rf _site/* && cp -r public/* _site/"
   },
   "dependencies": {
-    "classnames": "^2.2.6",
-    "gatsby": "^2.13.35",
-    "gatsby-image": "^2.2.7",
-    "gatsby-plugin-sharp": "^2.2.9",
-    "gatsby-source-filesystem": "^2.1.6",
-    "gatsby-transformer-sharp": "^2.2.5",
-    "gatsby-transformer-yaml": "^2.2.4",
-    "lodash": "^4.17.15",
-    "prop-types": "^15.6.2",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "uswds": "^2.0.3"
+    "gatsby": "^2.19.12",
+    "gatsby-awesome-pagination": "^0.3.5",
+    "gatsby-plugin-manifest": "^2.2.41",
+    "gatsby-plugin-offline": "^3.0.34",
+    "gatsby-plugin-react-helmet": "^3.1.22",
+    "gatsby-plugin-sass": "^2.1.28",
+    "gatsby-source-filesystem": "^2.1.48",
+    "gatsby-transformer-remark": "^2.6.50",
+    "node-sass": "^4.13.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-helmet": "^5.2.1",
+    "uswds": "^2.4.0"
   },
   "devDependencies": {
-    "prettier": "^1.15.3",
-    "rimraf": "^2.6.3"
+    "prettier": "^1.19.1",
+    "rimraf": "^3.0.1"
   }
 }

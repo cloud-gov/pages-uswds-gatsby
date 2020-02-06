@@ -1,45 +1,91 @@
+/**
+ * Implement Gatsby's Node APIs in this file.
+ *
+ * See: https://www.gatsbyjs.org/docs/node-apis/
+ */
+
 const path = require('path');
-const webpack = require('webpack');
+const { paginate } = require('gatsby-awesome-pagination');
 
-const uswdsRoot = 'node_modules/uswds';
-const shims = 'shims';
+// Adds the source "name" from the filesystem plugin to the markdown remark nodes
+// so we can filter by it.
+exports.onCreateNode = ({ node, getNode, actions }) => {
+  const { createNodeField } = actions;
 
-module.exports = {
-  onCreateWebpackConfig: ({ stage, actions }) => {
-    actions.setWebpackConfig({
-      resolve: {
-        alias: {
-          // Until uswds exports the components individually
-          uswds_components: path.resolve(
-            __dirname,
-            uswdsRoot,
-            'src/js/components'
-          ),
-          uswds_images: path.resolve(__dirname, uswdsRoot, 'dist/img'),
-          // Until uswds exports the polyfills individually, though this doesn't totally fix things
-          // because some polyfills are included no matter what, see below
-          uswds_polyfills: path.resolve(
-            __dirname,
-            uswdsRoot,
-            'src/js/polyfills'
-          ),
-          // until the `uswds-react` library is created, just a helper for now
-          'uswds-react': path.resolve(__dirname, 'src/lib'),
-          /**
-           * Reroute and shim some polyfills to be able to statically render
-           */
-          'element-closest': path.resolve(__dirname, shims, 'element-closest'),
-          'element-closest-orig': path.resolve(
-            __dirname,
-            'node_modules/element-closest'
-          ),
-          'elem-dataset': path.resolve(__dirname, shims, 'elem-dataset'),
-          'elem-dataset-orig': path.resolve(
-            __dirname,
-            'node_modules/elem-dataset'
-          ),
-        },
-      },
-    });
-  },
+  // We only care about MarkdownRemark content.
+  if (node.internal.type !== 'MarkdownRemark') {
+    return;
+  }
+
+  const fileNode = getNode(node.parent);
+
+  createNodeField({
+    node,
+    name: 'sourceName',
+    value: fileNode.sourceInstanceName,
+  });
 };
+
+exports.createPages = async ({ actions, graphql }) => {
+  const { createPage } = actions;
+
+  await createBlogPages(createPage, graphql);
+  await createMarkdownPages(createPage, graphql);
+};
+
+async function createBlogPages(createPage, graphql) {
+  const blogTemplate = path.resolve('./src/templates/blog.js');
+  const postTemplate = path.resolve('./src/templates/blog-post.js');
+  const posts = await markdownQuery(graphql, 'blog-posts');
+
+  // Create pagination index page
+  paginate({
+    createPage,
+    items: posts,
+    itemsPerPage: 3,
+    pathPrefix: '/blog',
+    component: blogTemplate,
+  });
+
+  // Create individual pages
+  posts.forEach(({ node }) => {
+    createPage({
+      path: node.frontmatter.path,
+      component: postTemplate,
+    });
+  });
+}
+
+async function createMarkdownPages(createPage, graphql) {
+  const pageTemplate = path.resolve('./src/templates/documentation-page.js');
+  const pages = await markdownQuery(graphql, 'documentation-pages');
+
+  pages.forEach(({ node }) => {
+    createPage({
+      path: node.frontmatter.path,
+      component: pageTemplate,
+    });
+  });
+}
+
+async function markdownQuery(graphql, source) {
+  const result = await graphql(`
+    {
+      allMarkdownRemark(filter: { fields: { sourceName: { eq: "${source}" } } }) {
+        edges {
+          node {
+            frontmatter {
+              path
+            }
+          }
+        }
+      }
+    }
+  `);
+
+  if (result.errors) {
+    console.error(result.errors);
+  }
+
+  return result.data.allMarkdownRemark.edges;
+}
