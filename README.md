@@ -2,6 +2,12 @@
 
 This is a working example of deploying a [Gatsby](https://www.gatsbyjs.org/) and [US Web Design System v2.0](https://v2.designsystem.digital.gov/) static site with [Federalist](https://federalist.18f.gov/). It should be considered **experimental and a work in progress**.
 
+## 🚫🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🚫
+
+This branch has been deprecated in favor of [Version 2](https://github.com/18F/federalist-uswds-gatsby/tree/master) and is no longer maintained.
+
+## 🚫🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🚫
+
 ## See It Live
 
 [Click Me](https://federalist-proxy.app.cloud.gov/site/18f/federalist-uswds-gatsby/)
