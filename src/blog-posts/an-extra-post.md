@@ -3,7 +3,6 @@ title: An extra post for good measure
 path: /an-extra-post
 date: January 13, 2019
 author: Author
-excerpt: This is an excerpt
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dapibus interdum pellentesque. Integer eu vehicula elit. Sed cursus magna in dui suscipit rhoncus.
