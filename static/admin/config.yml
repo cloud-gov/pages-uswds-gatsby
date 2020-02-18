@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: 18f/federalist-uswds-gatsby
-  base_url: https://federalistapp-staging.18f.gov
+  base_url: https://federalistapp.18f.gov
   auth_endpoint: external/auth/github
   branch: master
   use_graphql: true
