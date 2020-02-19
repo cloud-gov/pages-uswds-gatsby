@@ -11,8 +11,6 @@ media_folder: static/images
 public_folder: /images
 publish_mode: editorial_workflow
 logo_url: https://federalist.18f.gov/assets/images/federalist-logo.png
-site_url: https://federalist-b146cf1e-c756-4b1f-bb83-c516cac94fbb.app.cloud.gov/site/18f/federalist-uswds-gatsby
-display_url: ' '
 
 collections:
   - name: blog
