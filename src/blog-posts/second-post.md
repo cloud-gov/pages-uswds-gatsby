@@ -1,6 +1,6 @@
 ---
 title: Second page
-path: /second-page
+path: /blog/second-page
 date: January 15, 2019
 author: George Washington
 ---

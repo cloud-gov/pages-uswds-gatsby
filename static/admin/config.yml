@@ -11,7 +11,8 @@ media_folder: static/images
 public_folder: /images
 publish_mode: editorial_workflow
 logo_url: https://federalist.18f.gov/assets/images/federalist-logo.png
-site_url: https://federalist.18f.gov
+site_url: https://federalist-b146cf1e-c756-4b1f-bb83-c516cac94fbb.app.cloud.gov/site/18f/federalist-uswds-gatsby
+display_url: ' '
 
 collections:
   - name: blog
@@ -19,12 +20,25 @@ collections:
     label_singular: Blog Post
     folder: src/blog-posts
     create: true
+    preview_path: '{{path}}'
     editor:
       preview: false
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Path', name: 'path', widget: 'string' }
-      - { label: 'Date', name: 'date', widget: 'datetime' }
+      - {
+          label: 'Path',
+          name: 'path',
+          widget: 'string',
+          pattern: ['^\/blog\/[a-zA-Z](\w|-)*$', 'Must start with a `/blog/` and a letter, followed by letters, numbers `_` and `-`.']
+        }
+      - {
+          label: 'Date',
+          name: 'date',
+          widget: 'datetime',
+          format: 'MMMM D, YYYY',
+          dateFormat: 'MMMM D, YYYY',
+          timeFormat: false
+        }
       - { label: 'Author', name: 'author', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
 
@@ -33,10 +47,16 @@ collections:
     label_singular: Documentation Page
     folder: src/documentation-pages
     create: true
+    preview_path: '{{path}}'
     editor:
       preview: false
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Path', name: 'path', widget: 'string' }
+      - {
+          label: 'Path',
+          name: 'path',
+          widget: 'string',
+          pattern: ['^\/[a-zA-Z](\w|-)*$', 'Must start with a `/` and a letter, followed by letters, numbers `_` and `-`.']
+        }
       - { label: 'Sidenav', name: 'sidenav', widget: 'boolean' }
       - { label: 'Body', name: 'body', widget: 'markdown' }

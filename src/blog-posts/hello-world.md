@@ -1,6 +1,6 @@
 ---
 title: A very long blog header that has a lot of detail but is still relevant
-path: /hello-world
+path: /blog/hello-world
 date: January 14, 2019
 author: Abraham Lincoln
 ---
