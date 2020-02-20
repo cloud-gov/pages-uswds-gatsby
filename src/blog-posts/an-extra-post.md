@@ -1,6 +1,6 @@
 ---
-title: An Extra Post
-date: January 13, 2019
+title: An Extra Post Yes
+date: 'January 13, 2019'
 author: Author
 ---
 
