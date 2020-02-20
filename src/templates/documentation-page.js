@@ -33,10 +33,12 @@ const DocumentationPage = ({ data }) => {
 };
 
 export const pageQuery = graphql`
-  query($path: String!) {
+  query($name: String!) {
     markdownRemark(
-      fields: { sourceName: { eq: "documentation-pages" } }
-      frontmatter: { path: { eq: $path } }
+      fields: {
+        sourceName: { eq: "documentation-pages" }
+        name: { eq: $name }
+      }
     ) {
       html
       frontmatter {

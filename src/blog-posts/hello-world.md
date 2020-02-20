@@ -1,6 +1,5 @@
 ---
-title: A very long blog header that has a lot of detail but is still relevant
-path: /blog/hello-world
+title: Hello World
 date: January 14, 2019
 author: Abraham Lincoln
 ---

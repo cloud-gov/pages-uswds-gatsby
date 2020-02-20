@@ -18,17 +18,11 @@ collections:
     label_singular: Blog Post
     folder: src/blog-posts
     create: true
-    preview_path: '{{path}}'
+    preview_path: 'blog/{{slug}}'
     editor:
       preview: false
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
-      - {
-          label: 'Path',
-          name: 'path',
-          widget: 'string',
-          pattern: ['^\/blog\/[a-zA-Z](\w|-)*$', 'Must start with a `/blog/` and a letter, followed by letters, numbers `_` and `-`.']
-        }
       - {
           label: 'Date',
           name: 'date',
@@ -45,16 +39,10 @@ collections:
     label_singular: Documentation Page
     folder: src/documentation-pages
     create: true
-    preview_path: '{{path}}'
+    preview_path: '{{slug}}'
     editor:
       preview: false
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
-      - {
-          label: 'Path',
-          name: 'path',
-          widget: 'string',
-          pattern: ['^\/[a-zA-Z](\w|-)*$', 'Must start with a `/` and a letter, followed by letters, numbers `_` and `-`.']
-        }
       - { label: 'Sidenav', name: 'sidenav', widget: 'boolean' }
       - { label: 'Body', name: 'body', widget: 'markdown' }

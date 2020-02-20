@@ -35,16 +35,17 @@ const BlogPost = ({ data }) => {
 };
 
 export const pageQuery = graphql`
-  query($path: String!) {
+  query($name: String!) {
     markdownRemark(
-      fields: { sourceName: { eq: "blog-posts" } }
-      frontmatter: { path: { eq: $path } }
+      fields: {
+        sourceName: { eq: "blog-posts" }
+        name: { eq: $name }
+      }
     ) {
       html
       frontmatter {
         author
         date
-        path
         title
       }
     }

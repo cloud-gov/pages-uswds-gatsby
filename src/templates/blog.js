@@ -8,6 +8,7 @@ const Blog = ({ data, pageContext }) => {
   const posts = data.allMarkdownRemark.edges.map(({ node }) => ({
     html: node.html,
     ...node.frontmatter,
+    path: '/blog/' + node.fields.name,
   }));
   return (
     <Layout>
@@ -233,8 +234,10 @@ export const pageQuery = graphql`
           frontmatter {
             author
             date
-            path
             title
+          }
+          fields {
+            name
           }
         }
       }

@@ -1,6 +1,5 @@
 ---
 title: Document with sidenav
-path: /document-with-sidenav
 sidenav: true
 ---
 

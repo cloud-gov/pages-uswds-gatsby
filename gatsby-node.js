@@ -24,6 +24,12 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     name: 'sourceName',
     value: fileNode.sourceInstanceName,
   });
+  
+  createNodeField({
+    node,
+    name: 'name',
+    value: fileNode.name,
+  });
 };
 
 exports.createPages = async ({ actions, graphql }) => {
@@ -50,8 +56,11 @@ async function createBlogPages(createPage, graphql) {
   // Create individual pages
   posts.forEach(({ node }) => {
     createPage({
-      path: node.frontmatter.path,
+      path: 'blog/' + node.fields.name,
       component: postTemplate,
+      context: {
+        name: node.fields.name
+      },
     });
   });
 }
@@ -62,8 +71,11 @@ async function createMarkdownPages(createPage, graphql) {
 
   pages.forEach(({ node }) => {
     createPage({
-      path: node.frontmatter.path,
+      path: node.fields.name,
       component: pageTemplate,
+      context: {
+        name: node.fields.name
+      },
     });
   });
 }
@@ -74,8 +86,8 @@ async function markdownQuery(graphql, source) {
       allMarkdownRemark(filter: { fields: { sourceName: { eq: "${source}" } } }) {
         edges {
           node {
-            frontmatter {
-              path
+            fields {
+              name
             }
           }
         }

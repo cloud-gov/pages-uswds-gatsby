@@ -1,6 +1,5 @@
 ---
-title: Third page
-path: /blog/third-page
+title: Third Post
 date: January 16, 2019
 author: Benjamin Franklin
 ---

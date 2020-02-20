@@ -1,6 +1,5 @@
 ---
 title: Document
-path: /document
 sidenav: false
 ---
 

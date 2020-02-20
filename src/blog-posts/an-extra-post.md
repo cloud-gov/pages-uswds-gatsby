@@ -1,6 +1,5 @@
 ---
-title: An extra post for good measure
-path: /blog/an-extra-post
+title: An Extra Post
 date: January 13, 2019
 author: Author
 ---
