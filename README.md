@@ -81,7 +81,6 @@ The simplest way to create your own repository based on this starter is to use `
 ### Install dependencies and run app
 
     $ npm install
-    $ bundle install
     $ npm run develop
 
 Open your web browser to [localhost:8000](http://localhost:8000/) to view your
