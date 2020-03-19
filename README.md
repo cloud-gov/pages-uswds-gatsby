@@ -31,7 +31,7 @@ If you're looking for the original starter that included a more integrated appro
 
 ✅ Publish custom pages using React. Any javascript files in the `src/pages` directory will be turned into pages at `/<filename>.html`, where `<filename>` is the actualy name of the file.
 
-✅ Customize SEO information for each page by adding the `src/components/seo.js` component to any page or template and providing the desired information. Ex. [Home page](https://github.com/18F/federalist-uswds-gatsby2/blob/master/src/pages/index.js#L11).
+✅ Customize SEO information for each page by adding the `src/components/seo.js` component to any page or template and providing the desired information. Ex. [Home page](https://github.com/18F/federalist-uswds-gatsby/blob/master/src/pages/index.js#L11).
 
 ✅ [Search.gov](https://search.gov) integration - Once you have registered and configured Search.gov for your site by following [these instructions](https://federalist.18f.gov/documentation/search/), add your "affiliate" and "access key" to `gatsby-config.js`. Ex.
 
@@ -62,21 +62,21 @@ dapAgency: 'GSA',
 
 The simplest way to create your own repository based on this starter is to use `npx` (included with `node`) with `degit`.
 
-    $ npx degit https://github.com/18F/federalist-uswds-gatsby2 <destination-folder>
+    $ npx degit https://github.com/18F/federalist-uswds-gatsby <destination-folder>
     $ cd <destination-folder>
     $ git init
 
 #### With `git`
 
-    $ git clone --depth 1 https://github.com/18F/federalist-uswds-gatsby2 <destination-folder>
+    $ git clone --depth 1 https://github.com/18F/federalist-uswds-gatsby <destination-folder>
     $ cd <destination-folder>
     $ npm run reset
     $ git init
 
 ### Installation for development
 
-    $ git clone https://github.com/18F/federalist-uswds-gatsby2
-    $ cd federalist-uswds-gatsby2
+    $ git clone https://github.com/18F/federalist-uswds-gatsby
+    $ cd federalist-uswds-gatsby
 
 ### Install dependencies and run app
 
@@ -113,7 +113,7 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 
 - The Federalist script runs the Gatsby build with the `--prefix-paths` flag. This is necessary to make sure all internal internal links point to the correct path for preview deployments.
 - Always use the `Link` component provided by Gatsby for internal links, see previous note.
-- Importing USWDS images can be done straight from their local location in `node_modules`. See [Banner.js](https://github.com/18F/federalist-uswds-gatsby2/blob/master/src/components/banner.js) for an example.
+- Importing USWDS images can be done straight from their local location in `node_modules`. See [Banner.js](https://github.com/18F/federalist-uswds-gatsby/blob/master/src/components/banner.js) for an example.
 - This is built from the default [Gatsby default starter](https://www.gatsbyjs.org/starters/gatsbyjs/gatsby-starter-default/), you can view the documentation there to see more of what is included.
 
 ## Contributing
