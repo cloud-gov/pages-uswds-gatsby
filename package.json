@@ -33,7 +33,7 @@
     "uswds": "^2.4.0"
   },
   "devDependencies": {
-    "prettier": "^1.19.1",
+    "prettier": "^2.0.4",
     "rimraf": "^3.0.1"
   }
 }
