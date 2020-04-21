@@ -8,3 +8,7 @@ update_configs:
       - "amirbey"
     default_assignees:
       - "davemcorwin"
+    automerged_updates:
+      - match:
+          dependency_type: "all"
+          update_type: "semver:minor"
