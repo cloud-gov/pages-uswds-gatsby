@@ -18,14 +18,16 @@ const BlogPost = ({ data }) => {
         <div className="grid-container">
           <div className="grid-row grid-gap">
             <div className="usa-layout-docs__main desktop:grid-col-9 usa-prose">
-              <h1 className="title">{frontmatter.title}</h1>
-              <div className="text-base margin-bottom-2">
-                <div className="margin-top-neg-105">
-                  By <span className="text-bold">{frontmatter.author}</span> ·{' '}
-                  {frontmatter.date}
+              <main id="main-content">
+                <h1 className="title">{frontmatter.title}</h1>
+                <div className="text-base margin-bottom-2">
+                  <div className="margin-top-neg-105">
+                    By <span className="text-bold">{frontmatter.author}</span> ·{' '}
+                    {frontmatter.date}
+                  </div>
+                  <span dangerouslySetInnerHTML={{ __html: html }} />
                 </div>
-                <span dangerouslySetInnerHTML={{ __html: html }} />
-              </div>
+              </main>
             </div>
           </div>
         </div>
