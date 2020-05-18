@@ -15,7 +15,7 @@
     "federalist:copy": "mkdir -p _site && rm -rf _site/* && cp -r public/* _site/"
   },
   "dependencies": {
-    "gatsby": "^2.21.22",
+    "gatsby": "^2.21.35",
     "gatsby-awesome-pagination": "^0.3.6",
     "gatsby-plugin-manifest": "^2.4.2",
     "gatsby-plugin-netlify-cms": "^4.3.2",
