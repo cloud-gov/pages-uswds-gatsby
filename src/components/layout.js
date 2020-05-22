@@ -48,7 +48,7 @@ const Layout = ({ children }) => {
       <Header siteTitle={title}>
         <Nav {...{ navigation, secondaryLinks }} />
       </Header>
-      <main id="main-content">{children}</main>
+        {children}
       <Footer />
     </>
   );

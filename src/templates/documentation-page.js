@@ -21,10 +21,9 @@ const DocumentationPage = ({ data }) => {
           <div className="grid-row grid-gap">
             {frontmatter.sidenav && <Sidenav />}
 
-            <div
-              className="usa-layout-docs__main desktop:grid-col-9 usa-prose"
-              dangerouslySetInnerHTML={{ __html: html }}
-            ></div>
+            <main id="main-content" className="usa-layout-docs__main desktop:grid-col-9 usa-prose"
+              dangerouslySetInnerHTML={{ __html: html }}>
+            </main>
           </div>
         </div>
       </div>
