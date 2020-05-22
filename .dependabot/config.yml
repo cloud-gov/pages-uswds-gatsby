@@ -3,8 +3,3 @@ update_configs:
   - package_manager: "javascript"
     directory: "/"
     update_schedule: "weekly"
-    default_reviewers:
-      - "davemcorwin"
-      - "amirbey"
-    default_assignees:
-      - "davemcorwin"

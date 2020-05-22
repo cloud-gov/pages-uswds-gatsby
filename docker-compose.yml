@@ -1,0 +1,10 @@
+version: '3'
+services:
+  node:
+    image: node:12
+    working_dir: /app
+    volumes:
+      - .:/app:delegated
+    ports:
+      - "8000:8000"
+    command: npm run develop -- -H 0.0.0.0
