@@ -1,22 +1,7 @@
-/*
-  These are necessary for the image and font urls referenced in the source
-  files to resolve correctly.
-*/
-$theme-image-path: '../../node_modules/uswds/src/img';
-$theme-font-path: '../../node_modules/uswds/src/fonts';
+// Edit the theme files to customize USWDS
+// https://designsystem.digital.gov/documentation/developers/#sass-and-theme-settings
 
-/*
-  The url for the hero image in the source file is not currently prefixed by
-  the $theme-image-path above.
-*/
-
-$theme-hero-image: '#{$theme-image-path}/hero.png';
-
-// Your custom changes to variables go here
-// Uncomment to see this working
-// $theme-color-primary-darker: 'black';
-
-@import 'uswds';
+@import 'theme/styles.scss';
 
 // Your custom SASS/CSS goes here
 @media screen and (min-width: 640px) {
