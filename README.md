@@ -39,19 +39,40 @@ If you're looking for the original starter that included a more integrated appro
 
 ```
 searchgov: {
-  endpoint: 'https://search.usa.gov', // You should not change this.
-  affiliate: 'federalist-uswds-example', // replace this with your search.gov account
-  access_key: 'xX1gtb2RcnLbIYkHAcB6IaTRr4ZfN-p16ofcyUebeko=', // This is placeholder. Not private.
-  inline: true, // this renders the results on the same domain. Otherwise, it will render the results in the search.gov domain
+
+  // You should not change this.
+  endpoint: 'https://search.usa.gov',
+
+  // replace this with your search.gov account
+  affiliate: 'federalist-uswds-example',
+
+  // replace with your access key
+  access_key: 'xX1gtb2RcnLbIYkHAcB6IaTRr4ZfN-p16ofcyUebeko=',
+
+  // this renders the results within the page instead of sending to user to search.gov
+  inline: true,
 }
 ```
 
 The logic for using Search.gov can be found in the `src/components/search-form.js` component and supports displaying the results inline or sending the user to Search.gov the view the results. This setting defaults to "inline" but can be changed by setting `searchgov: { inline: false }` in `gatsby-config.js`.
 
-✅ [Digital Analytics Program (DAP)](https://digital.gov/services/dap/) integration - Once you have registered your site with DAP add your "agency" to the `dapAgency` key in `gatsby-config.js`. Ex.
+✅ [Digital Analytics Program (DAP)](https://digital.gov/services/dap/) integration - Once you have registered your site with DAP add your "agency" and optionally, `subAgency` to `gatsby-config.js` and uncomment the appropriate lines. Ex.
 
 ```
-dapAgency: 'GSA',
+dap: {
+    // agency: 'your-agency',
+
+    // Optional
+    // subAgency: 'your-subagency',
+},
+```
+
+✅ [Google Analytics](https://analytics.google.com/analytics/web/) integration - If you have a Google Analytics account to use in addition to DAP, add your "ua" to `gatsby-config.js` and uncomment the appropriate lines. Ex.
+
+```
+ga: {
+    // ua: 'your-ua',
+},
 ```
 
 ✅ Out-of-the-box performant caching strategy following [Gatsby recommended practices](https://www.gatsbyjs.org/docs/caching/) via `federalist.json`. See [Federalist Documentation](https://federalist.18f.gov/documentation/) for more information on `federalist.json`.

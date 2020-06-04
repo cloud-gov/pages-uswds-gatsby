@@ -10,7 +10,7 @@ import { siteMetadata } from './gatsby-config';
 
 let loaded = false;
 
-const dap = pathname => {
+const digitalAnalytics = pathname => {
   window.gas && window.gas('send', 'pageview', pathname);
 };
 
@@ -30,31 +30,36 @@ const loadScript = (src, onLoad, attrs = {}) => new Promise(resolve => {
 });
 
 export const onInitialClientRender = () => {
+  const { dap, ga } = siteMetadata;
+  const { pathname } = window.location;
+
   const scripts = [];
 
-  if (siteMetadata.dapAgency) {
-    let src = `https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=${siteMetadata.dapAgency}`;
-    if (siteMetadata.dapSubAgency) {
-      src += `&subagency=${siteMetadata.dapSubAgency}`;
+  if (dap && dap.agency) {
+    let src = `https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=${dap.agency}`;
+    if (dap.subAgency) {
+      src += `&subagency=${dap.subAgency}`;
     }
-    const onLoad = () => dap(window.location.pathname);
+    const onLoad = () => digitalAnalytics(pathname);
     scripts.push(loadScript(src, onLoad, { id: '_fed_an_ua_tag'}));
   }
 
-  if (siteMetadata.googleAnalyticsUA) {
-    const src = `https://www.googletagmanager.com/gtag/js?id=${siteMetadata.googleAnalyticsUA}`;
-    const onLoad = () => googleAnalytics(window.location.pathname);
+  if (ga && ga.ua) {
+    const src = `https://www.googletagmanager.com/gtag/js?id=${ga.ua}`;
+    const onLoad = () => googleAnalytics(pathname);
     scripts.push(loadScript(src, onLoad));
 
-    // `forceSSL` was used for analytics.js (the older Google Analytics script).
-    // It isn't documented for gtag.js, but the term occurs in the gtag.js code;
-    // figure it doesn't hurt to leave it in. -@afeld, 5/29/19
+    /**
+     * `forceSSL` was used for analytics.js (the older Google Analytics script).
+     * It isn't documented for gtag.js, but the term occurs in the gtag.js code;
+     * figure it doesn't hurt to leave it in. -@afeld, 5/29/19
+     */
     const gtag = document.createElement('script');
     gtag.text = `
       window.dataLayer = window.dataLayer || [];
       function gtag() { dataLayer.push(arguments); }
       gtag('js', new Date());
-      gtag('config', '${siteMetadata.googleAnalyticsUA}', { 'anonymize_ip': true, 'forceSSL': true });
+      gtag('config', '${ga.ua}', { 'anonymize_ip': true, 'forceSSL': true });
     `;
     document.body.appendChild(gtag);
   }
@@ -65,7 +70,7 @@ export const onInitialClientRender = () => {
 
 export const onRouteUpdate = ({ location }) => {
   if (loaded) {
-    dap(location.pathname);
+    digitalAnalytics(location.pathname);
     googleAnalytics(location.pathname);
   }
 };
