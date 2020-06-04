@@ -37,8 +37,8 @@ export const onInitialClientRender = () => {
 
   if (dap && dap.agency) {
     let src = `https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=${dap.agency}`;
-    if (dap.subAgency) {
-      src += `&subagency=${dap.subAgency}`;
+    if (dap.subagency) {
+      src += `&subagency=${dap.subagency}`;
     }
     const onLoad = () => digitalAnalytics(pathname);
     scripts.push(loadScript(src, onLoad, { id: '_fed_an_ua_tag'}));

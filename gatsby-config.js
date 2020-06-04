@@ -90,7 +90,7 @@ module.exports = {
       // agency: 'your-agency',
 
       // Optional
-      // subAgency: 'your-subagency',
+      // subagency: 'your-subagency',
     },
 
     /**

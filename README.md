@@ -56,14 +56,14 @@ searchgov: {
 
 The logic for using Search.gov can be found in the `src/components/search-form.js` component and supports displaying the results inline or sending the user to Search.gov the view the results. This setting defaults to "inline" but can be changed by setting `searchgov: { inline: false }` in `gatsby-config.js`.
 
-✅ [Digital Analytics Program (DAP)](https://digital.gov/services/dap/) integration - Once you have registered your site with DAP add your "agency" and optionally, `subAgency` to `gatsby-config.js` and uncomment the appropriate lines. Ex.
+✅ [Digital Analytics Program (DAP)](https://digital.gov/services/dap/) integration - Once you have registered your site with DAP add your "agency" and optionally, `subagency` to `gatsby-config.js` and uncomment the appropriate lines. Ex.
 
 ```
 dap: {
     // agency: 'your-agency',
 
     // Optional
-    // subAgency: 'your-subagency',
+    // subagency: 'your-subagency',
 },
 ```
 
