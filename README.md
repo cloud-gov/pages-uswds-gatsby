@@ -67,7 +67,7 @@ dap: {
 },
 ```
 
-✅ [Google Analytics](https://analytics.google.com/analytics/web/) integration - If you have a Google Analytics account to use in addition to DAP, add your "ua" to `gatsby-config.js` and uncomment the appropriate lines. Ex.
+✅ [Google Analytics](https://analytics.google.com/analytics/web/) integration - If you have a Google Analytics account to use, add your "ua" to `gatsby-config.js` and uncomment the appropriate lines. Ex.
 
 ```
 ga: {
