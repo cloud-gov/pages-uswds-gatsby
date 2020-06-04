@@ -52,7 +52,7 @@ module.exports = {
 
     // Google Analytics configuration
     // uncomment below and provide your GA UA
-    googleAnalyticsUA: 'your UA',
+    // googleAnalyticsUA: 'your UA',
 
   },
   pathPrefix: process.env.BASEURL || '/',
