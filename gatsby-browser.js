@@ -35,14 +35,14 @@ export const onInitialClientRender = () => {
   if (siteMetadata.dapAgency) {
     let src = `https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=${siteMetadata.dapAgency}`;
     if (siteMetadata.dapSubAgency) {
-      src += `&subagency=${siteMetadata.dapSubAgency}`
+      src += `&subagency=${siteMetadata.dapSubAgency}`;
     }
     const onLoad = () => dap(window.location.pathname);
     scripts.push(loadScript(src, onLoad, { id: '_fed_an_ua_tag'}));
   }
 
   if (siteMetadata.googleAnalyticsUA) {
-    const src = `https://www.googletagmanager.com/gtag/js?id=${siteMetadata.googleAnalyticsUA}`
+    const src = `https://www.googletagmanager.com/gtag/js?id=${siteMetadata.googleAnalyticsUA}`;
     const onLoad = () => googleAnalytics(window.location.pathname);
     scripts.push(loadScript(src, onLoad));
 
