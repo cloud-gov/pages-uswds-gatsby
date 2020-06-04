@@ -33,18 +33,72 @@ module.exports = {
       { text: 'Another secondary link', link: '/' },
     ],
 
-    // Search.gov configuration
-    //
-    // 1. Create an account with Search.gov https://search.usa.gov/signup
-    // 2. Add a new site.
-    // 3. Add your site/affiliate name here.
+    /**
+     * Search.gov configuration
+     * 
+     * 1. Create an account with Search.gov https://search.usa.gov/signup
+     * 2. Add a new site.
+     * 3. Add your site/affiliate name here.
+     */
     searchgov: {
-      endpoint: 'https://search.usa.gov', // You should not change this.
-      affiliate: 'federalist-uswds-example', // replace this with your search.gov account
-      access_key: 'xX1gtb2RcnLbIYkHAcB6IaTRr4ZfN-p16ofcyUebeko=', // This is placeholder. Not private.
-      inline: true, // this renders the results on the same domain. Otherwise, it will render the results in the search.gov domain
+      
+      // You should not change this.
+      endpoint: 'https://search.usa.gov',
+      
+      // replace this with your search.gov account
+      affiliate: 'federalist-uswds-example',
+      
+      // replace with your access key
+      access_key: 'xX1gtb2RcnLbIYkHAcB6IaTRr4ZfN-p16ofcyUebeko=',
+      
+      // this renders the results within the page instead of sending to user to search.gov
+      inline: true, 
     },
-    dapAgency: 'GSA',
+
+    /**
+     * Digital Analytics Program (DAP) configuration
+     * 
+     * USAID   - Agency for International Development
+     * USDA    - Department of Agriculture
+     * DOC     - Department of Commerce
+     * DOD     - Department of Defense
+     * ED      - Department of Education
+     * DOE     - Department of Energy
+     * HHS     - Department of Health and Human Services
+     * DHS     - Department of Homeland Security
+     * HUD     - Department of Housing and Urban Development
+     * DOJ     - Department of Justice
+     * DOL     - Department of Labor
+     * DOS     - Department of State
+     * DOI     - Department of the Interior
+     * TREAS   - Department of the Treasury
+     * DOT     - Department of Transportation
+     * VA      - Department of Veterans Affairs
+     * EPA     - Environmental Protection Agency
+     * EOP     - Executive Office of the President
+     * GSA     - General Services Administration
+     * NASA    - National Aeronautics and Space Administration
+     * NARA    - National Archives and Records Administration
+     * NSF     - National Science Foundation
+     * NRC     - Nuclear Regulatory Commission
+     * OPM     - Office of Personnel Management
+     * USPS    - Postal Service
+     * SBA     - Small Business Administration
+     * SSA     - Social Security Administration
+     */
+    dap: {
+      // agency: 'your-agency',
+
+      // Optional
+      // subagency: 'your-subagency',
+    },
+
+    /**
+     * Google Analytics configuration
+     */
+    ga: {
+      // ua: 'your-ua',
+    },
   },
   pathPrefix: process.env.BASEURL || '/',
   plugins: [
