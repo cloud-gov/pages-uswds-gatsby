@@ -44,7 +44,16 @@ module.exports = {
       access_key: 'xX1gtb2RcnLbIYkHAcB6IaTRr4ZfN-p16ofcyUebeko=', // This is placeholder. Not private.
       inline: true, // this renders the results on the same domain. Otherwise, it will render the results in the search.gov domain
     },
+
+    // DAP configuration
     dapAgency: 'GSA',
+    // uncomment below and provide your subagency
+    // dapSubAgency: 'your subagency',
+
+    // Google Analytics configuration
+    // uncomment below and provide your GA UA
+    googleAnalyticsUA: 'your UA',
+
   },
   pathPrefix: process.env.BASEURL || '/',
   plugins: [

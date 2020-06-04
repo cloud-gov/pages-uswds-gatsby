@@ -33,6 +33,7 @@
     "uswds": "^2.7.0"
   },
   "devDependencies": {
+    "eslint-config-react-app": "^5.2.1",
     "prettier": "^2.0.5",
     "rimraf": "^3.0.2"
   },
