@@ -3,7 +3,7 @@ backend:
   repo: 18f/federalist-uswds-gatsby
   base_url: https://federalistapp.18f.gov
   auth_endpoint: external/auth/github
-  branch: master
+  branch: main
   preview_context: federalist/build
 
 media_folder: static/images
