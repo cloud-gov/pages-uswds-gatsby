@@ -34,7 +34,7 @@
   },
   "devDependencies": {
     "eslint-config-react-app": "^5.2.1",
-    "prettier": "^2.0.5",
+    "prettier": "^2.1.1",
     "rimraf": "^3.0.2"
   },
   "engines": {
