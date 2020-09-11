@@ -22,7 +22,7 @@
     "gatsby-plugin-offline": "^3.2.27",
     "gatsby-plugin-react-helmet": "^3.3.10",
     "gatsby-plugin-sass": "^2.3.12",
-    "gatsby-source-filesystem": "^2.3.27",
+    "gatsby-source-filesystem": "^2.3.29",
     "gatsby-transformer-remark": "^2.8.32",
     "netlify-cms-app": "^2.12.19",
     "node-sass": "^4.14.1",
