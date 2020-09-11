@@ -24,7 +24,7 @@
     "gatsby-plugin-sass": "^2.3.12",
     "gatsby-source-filesystem": "^2.3.29",
     "gatsby-transformer-remark": "^2.8.32",
-    "netlify-cms-app": "^2.12.19",
+    "netlify-cms-app": "^2.12.20",
     "node-sass": "^4.14.1",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
