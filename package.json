@@ -18,7 +18,7 @@
     "gatsby": "^2.24.58",
     "gatsby-awesome-pagination": "^0.3.6",
     "gatsby-plugin-manifest": "^2.4.28",
-    "gatsby-plugin-netlify-cms": "^4.3.13",
+    "gatsby-plugin-netlify-cms": "^4.3.14",
     "gatsby-plugin-offline": "^3.2.27",
     "gatsby-plugin-react-helmet": "^3.3.10",
     "gatsby-plugin-sass": "^2.3.12",
