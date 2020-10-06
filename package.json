@@ -23,7 +23,7 @@
     "gatsby-plugin-react-helmet": "^3.3.11",
     "gatsby-plugin-sass": "^2.3.13",
     "gatsby-source-filesystem": "^2.3.30",
-    "gatsby-transformer-remark": "^2.8.35",
+    "gatsby-transformer-remark": "^2.8.37",
     "netlify-cms-app": "^2.12.24",
     "node-sass": "^4.14.1",
     "prop-types": "^15.7.2",
