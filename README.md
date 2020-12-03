@@ -84,16 +84,16 @@ ga: {
 #### From Federalist
 This will create a copy of this repo in a Github repository of your choice and add it to your Federalist dashboard.
 
-- From [Federalist](https://federalistapp-staging.18f.gov/sites) click the "+ Add Site" button.
+- From [Federalist](https://federalistapp.18f.gov/sites) click the "+ Add Site" button.
 - Click the "Use this template" button for the appropriate template
 - Follow the instructions
 
 #### From Github
-This will create a copy of this repo in a Github repository of your choice but you will need to add it your [Federalist dashboard](https://federalistapp-staging.18f.gov/sites/new).
+This will create a copy of this repo in a Github repository of your choice but you will need to add it your [Federalist dashboard](https://federalistapp.18f.gov/sites/new).
 
 - Click the "Use this template" button above or [here](https://github.com/18F/federalist-uswds-gatsby/generate).
 - Follow the instructions
-- Return to [Federalist](https://federalistapp-staging.18f.gov/sites/new) and add the repository.
+- Return to [Federalist](https://federalistapp.18f.gov/sites/new) and add the repository.
 
 ### Hard mode
 
