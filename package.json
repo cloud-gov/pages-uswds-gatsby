@@ -30,7 +30,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.1.0",
-    "uswds": "^2.9.0"
+    "uswds": "^2.10.0"
   },
   "devDependencies": {
     "eslint-config-react-app": "^5.2.1",
