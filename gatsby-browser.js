@@ -30,7 +30,7 @@ const loadScript = (src, onLoad, attrs = {}) => new Promise(resolve => {
 });
 
 export const onInitialClientRender = () => {
-  const { dap, ga } = siteMetadata;
+  const { dap, ga , searchgov } = siteMetadata;
   const { pathname } = window.location;
 
   const scripts = [];
@@ -62,6 +62,21 @@ export const onInitialClientRender = () => {
       gtag('config', '${ga.ua}', { 'anonymize_ip': true, 'forceSSL': true });
     `;
     document.body.appendChild(gtag);
+  }
+
+
+
+  if (searchgov && searchgov.affiliate && searchgov.suggestions) {
+    const config = document.createElement('script');
+    config.text = `
+      var usasearch_config = { siteHandle: "${searchgov.affiliate}" };
+    `;
+    document.body.appendChild(config);
+    
+    const src="https://search.usa.gov/javascripts/remote.loader.js";
+    const onLoad = () => console.log("Typeahead suggestions loaded.");
+    scripts.push(loadScript(src, onLoad));
+    
   }
 
   Promise.all(scripts)
