@@ -47,11 +47,11 @@ module.exports = {
       // Only change this if you're using a CNAME. Learn more here: https://search.gov/manual/cname.html
       endpoint: 'https://search.usa.gov',
       
-      // Replace this with your search.gov account.
-      affiliate: 'usasearch',
+      // Replace this with your search.gov site handle.
+      affiliate: 'federalist-uswds-example',
       
       // Replace this with your access key.
-      access_key: 'Q_XTNBtjvH-l0g1JU5QVj9G6vJRFnYkoR2NMSZKFWBc=',
+      access_key: 'xX1gtb2RcnLbIYkHAcB6IaTRr4ZfN-p16ofcyUebeko=',
       
       // This renders the results within the page instead of sending to user to search.gov.
       inline: true, 
