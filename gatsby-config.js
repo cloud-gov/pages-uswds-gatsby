@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    // Replace the Site URL with your domain, ex. https://agency.gov 
-    siteUrl: 'https://agency.gov',
+    // Replace the Site URL with your domain, ex. https://example.gov 
+    siteUrl: 'https://example.gov',
     author: 'Foo',
     title: `Agency Name`,
     description: `Agency Name (EAC) Lorem ipsum dolor sit amet, consectetur adipiscing elit.
