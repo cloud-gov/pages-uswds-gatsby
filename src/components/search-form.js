@@ -1,6 +1,7 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { navigate } from '@reach/router';
+import search from '../../node_modules/uswds/dist/img/usa-icons-bg/search--white.svg';
 
 const SearchForm = ({ navigation, secondaryLinks }) => {
   const { site } = useStaticQuery(
@@ -34,7 +35,7 @@ const SearchForm = ({ navigation, secondaryLinks }) => {
   };
 
   return (
-    <form className="usa-search usa-search-small" onSubmit={handleSubmit}>
+    <form className="usa-search usa-search--small" onSubmit={handleSubmit}>
       <div role="search">
         <label className="usa-sr-only" htmlFor="extended-search-field-small">
           Search small
@@ -46,8 +47,8 @@ const SearchForm = ({ navigation, secondaryLinks }) => {
           name="query"
           autoComplete="off"
         />
-        <button className="usa-button" type="submit">
-          <span className="usa-sr-only">Search</span>
+        <button class="usa-button" type="submit">
+          <img src={search} class="usa-search__submit-icon" alt="Search" />
         </button>
       </div>
     </form>

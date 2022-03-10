@@ -15,26 +15,26 @@
     "federalist:copy": "mkdir -p _site && rm -rf _site/* && cp -r public/* _site/"
   },
   "dependencies": {
-    "gatsby": "^2.29.3",
-    "gatsby-awesome-pagination": "^0.3.6",
-    "gatsby-plugin-manifest": "^2.12.0",
-    "gatsby-plugin-netlify-cms": "^4.7.0",
-    "gatsby-plugin-offline": "^3.7.1",
-    "gatsby-plugin-react-helmet": "^3.7.0",
+    "gatsby": "^2.32.13",
+    "gatsby-awesome-pagination": "^0.3.8",
+    "gatsby-plugin-manifest": "^2.12.1",
+    "gatsby-plugin-netlify-cms": "^4.10.1",
+    "gatsby-plugin-offline": "^3.10.2",
+    "gatsby-plugin-react-helmet": "^3.10.0",
     "gatsby-plugin-sass": "^2.8.0",
-    "gatsby-source-filesystem": "^2.8.1",
-    "gatsby-transformer-remark": "^2.13.1",
-    "netlify-cms-app": "^2.14.8",
+    "gatsby-source-filesystem": "^2.11.1",
+    "gatsby-transformer-remark": "^2.16.1",
+    "netlify-cms-app": "^2.15.68",
     "node-sass": "^4.14.1",
-    "prop-types": "^15.7.2",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
+    "prop-types": "^15.8.1",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
     "react-helmet": "^6.1.0",
-    "uswds": "^2.10.0"
+    "uswds": "^2.13.2"
   },
   "devDependencies": {
     "eslint-config-react-app": "^5.2.1",
-    "prettier": "^2.2.1",
+    "prettier": "^2.5.1",
     "rimraf": "^3.0.2"
   },
   "engines": {
