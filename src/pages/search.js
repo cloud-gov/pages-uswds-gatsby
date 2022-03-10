@@ -4,13 +4,13 @@ import { graphql } from 'gatsby';
 import Layout from '../components/layout';
 
 const SearchPage = ({ data, location }) => {
-  const { access_key, affiliate, endpoint } = data.site.siteMetadata.searchgov;
+  const { access_key, affiliate } = data.site.siteMetadata.searchgov;
   const query = new URLSearchParams(location.search).get('query');
 
   const [results, setResults] = useState([]);
 
   useEffect(() => {
-    const searchEndpoint = new URL(`${endpoint}/api/v2/search/i14y`);
+    const searchEndpoint = new URL(`https://api.gsa.gov/technology/searchgov/v2/results/i14y`);
     searchEndpoint.searchParams.append('affiliate', affiliate);
     searchEndpoint.searchParams.append('access_key', access_key);
     searchEndpoint.searchParams.append('query', query);
@@ -26,7 +26,7 @@ const SearchPage = ({ data, location }) => {
         setResults(posts.web.results);
       })
       .catch(err => console.log(err));
-  }, [query, access_key, affiliate, endpoint]);
+  }, [query, access_key, affiliate]);
 
   return (
     <Layout>
@@ -44,13 +44,19 @@ const SearchPage = ({ data, location }) => {
                       className="padding-bottom-5 margin-top-4 usa-prose border-bottom-05 border-base-lightest"
                     >
                       <b className="title">
-                        <a href={r.url}>{r.title}</a>
+                        <a href={r.url} 
+                          dangerouslySetInnerHTML={{
+                            __html: r.title
+                              .replace(/\uE000/g, '<span class="bg-yellow">')
+                              .replace(/\uE001/g, '</span>'),
+                          }}
+                        >
+                        </a>
                       </b>
                       <div
                         dangerouslySetInnerHTML={{
                           __html: r.snippet
-                            .replace(/class=/g, 'className=')
-                            .replace(/\uE000/g, '<span className="bg-yellow">')
+                            .replace(/\uE000/g, '<span class="bg-yellow">')
                             .replace(/\uE001/g, '</span>'),
                         }}
                       />
