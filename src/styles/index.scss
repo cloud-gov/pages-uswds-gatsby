@@ -16,7 +16,7 @@ $theme-hero-image: '#{$theme-image-path}/hero.png';
 // Uncomment to see this working
 // $theme-color-primary-darker: 'black';
 
-@import 'uswds';
+@import '../../node_modules/uswds/dist/scss/uswds.scss';
 
 // Your custom SASS/CSS goes here
 @media screen and (min-width: 640px) {

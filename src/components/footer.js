@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../../node_modules/uswds/dist/img/logo-img.png';
+import logo from 'uswds/img/logo-img.png';
 
 const Footer = () => (
   <footer className="usa-footer site-footer" role="contentinfo">

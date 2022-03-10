@@ -1,7 +1,7 @@
 import { Link } from 'gatsby';
 import React from 'react';
 
-import close from '../../node_modules/uswds/dist/img/close.svg';
+import close from 'uswds/img/close.svg';
 import SearchForm from './search-form';
 
 const Nav = ({ navigation, secondaryLinks }) => (
