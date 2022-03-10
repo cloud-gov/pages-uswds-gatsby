@@ -1,7 +1,7 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { navigate } from '@reach/router';
-import search from '../../node_modules/uswds/dist/img/usa-icons-bg/search--white.svg';
+import search from 'uswds/img/usa-icons-bg/search--white.svg';
 
 const SearchForm = ({ navigation, secondaryLinks }) => {
   const { site } = useStaticQuery(

@@ -1,7 +1,7 @@
 import React from 'react';
-import flag from '../../node_modules/uswds/dist/img/us_flag_small.png';
-import dotGov from '../../node_modules/uswds/dist/img/icon-dot-gov.svg';
-import https from '../../node_modules/uswds/dist/img/icon-https.svg';
+import flag from 'uswds/img/us_flag_small.png';
+import dotGov from 'uswds/img/icon-dot-gov.svg';
+import https from 'uswds/img/icon-https.svg';
 
 const Banner = () => (
   <div className="usa-banner">
