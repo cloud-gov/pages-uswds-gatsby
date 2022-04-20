@@ -1,7 +1,7 @@
 version: '3'
 services:
   node:
-    image: node:14.15
+    image: node:16.13
     working_dir: /app
     volumes:
       - .:/app:delegated
