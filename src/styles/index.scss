@@ -1,4 +1,10 @@
 /*
+  Hide compile warnings and notifications, make want to set to true in dev
+*/
+$theme-show-compile-warnings: false;
+$theme-show-notifications: false;
+
+/*
   These are necessary for the image and font urls referenced in the source
   files to resolve correctly.
 */
