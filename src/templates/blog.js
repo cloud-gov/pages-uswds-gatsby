@@ -3,6 +3,7 @@ import { graphql, Link } from 'gatsby';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
+import Pagination from '../components/pagination';
 
 const Blog = ({ data, pageContext }) => {
   const posts = data.allMarkdownRemark.edges.map(({ node }) => ({
@@ -29,7 +30,7 @@ const Blog = ({ data, pageContext }) => {
           <div className="desktop:grid-col-8 usa-prose padding-right-4">
             <main id="main-content">
               {/* This loops through the paginated posts */}
-              {posts.map(post => (
+              {posts.map((post) => (
                 <div
                   key={post.title}
                   className="padding-bottom-5 margin-top-4 usa-prose border-bottom-05 border-base-lightest"
@@ -55,55 +56,14 @@ const Blog = ({ data, pageContext }) => {
               ))}
 
               {/* Pagination links */}
-              <div className="grid-row padding-top-2">
-                <div className="tablet:grid-col-4 text-center tablet:order-2 font-body-xs text-base">
-                  Page {pageContext.humanPageNumber} of{' '}
-                  {pageContext.numberOfPages}
-                </div>
-                <div className="tablet:grid-col-4 text-right tablet:order-3">
-                  {pageContext.nextPagePath && (
-                    <>
-                      <Link
-                        to={pageContext.nextPagePath}
-                        className="paginate-link usa-link text-no-underline text-bold tablet:margin-top-0"
-                      >
-                        Next {pageContext.limit} Posts &rsaquo;
-                      </Link>
-                      <Link
-                        to={pageContext.nextPagePath}
-                        className="paginate-button usa-button margin-top-3"
-                      >
-                        Next {pageContext.limit} Posts &rsaquo;
-                      </Link>
-                    </>
-                  )}
-                </div>
-                <div className="tablet:grid-col-4 text-left tablet:order-1">
-                  {pageContext.previousPagePath && (
-                    <>
-                      <Link
-                        to={pageContext.previousPagePath}
-                        className="paginate-link usa-link text-no-underline text-bold tablet:margin-top-0"
-                      >
-                        &lsaquo; Previous {pageContext.limit} Posts
-                      </Link>
-                      <Link
-                        to={pageContext.previousPagePath}
-                        className="paginate-button usa-button margin-top-2"
-                      >
-                        &lsaquo; Previous {pageContext.limit} Posts
-                      </Link>
-                    </>
-                  )}
-                </div>
-              </div>
+              <Pagination collectionPath="/blog/" pageContext={pageContext} />
             </main>
           </div>
           <aside className="desktop:grid-col-fill margin-top-4 padding-right-4">
             <div className="border-top-1 border-accent-cool-darker padding-top-2 margin-bottom-4 usa-prose">
               <h4 className="">Most Recent Posts</h4>
               <ul className="usa-list usa-list--unstyled padding-top-2">
-                {posts.map(post => (
+                {posts.map((post) => (
                   <li key={post.title} className="padding-bottom-1">
                     <Link className="usa-link" to={post.path}>
                       {post.title}
@@ -223,7 +183,7 @@ const Blog = ({ data, pageContext }) => {
 };
 
 export const pageQuery = graphql`
-  query($skip: Int!, $limit: Int!) {
+  query ($skip: Int!, $limit: Int!) {
     allMarkdownRemark(
       filter: { fields: { sourceName: { eq: "blog-posts" } } }
       sort: { fields: frontmatter___date, order: DESC }

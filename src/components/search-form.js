@@ -22,7 +22,7 @@ const SearchForm = ({ navigation, secondaryLinks }) => {
   );
   const { affiliate, endpoint, inline } = site.siteMetadata.searchgov;
 
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     const query = e.currentTarget.query.value;
     if (inline) {
@@ -47,8 +47,8 @@ const SearchForm = ({ navigation, secondaryLinks }) => {
           name="query"
           autoComplete="off"
         />
-        <button class="usa-button" type="submit">
-          <img src={search} class="usa-search__submit-icon" alt="Search" />
+        <button className="usa-button" type="submit">
+          <img src={search} className="usa-search__submit-icon" alt="Search" />
         </button>
       </div>
     </form>
