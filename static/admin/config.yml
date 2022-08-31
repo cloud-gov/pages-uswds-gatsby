@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: cloud-gov/pages-uswds-jekyll
+  repo: cloud-gov/pages-uswds-gatsby
   base_url: https://pages.cloud.gov
   auth_endpoint: external/auth/github
   preview_context: pages/build
