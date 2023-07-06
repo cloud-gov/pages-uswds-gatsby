@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    // Replace the Site URL with your domain, ex. https://example.gov 
+    // Replace the Site URL with your domain, ex. https://example.gov
     siteUrl: 'https://example.gov',
     author: 'Foo',
     title: `Agency Name`,
@@ -37,33 +37,25 @@ module.exports = {
 
     /**
      * Search.gov configuration
-     * 
+     *
      * 1. Create an account with Search.gov https://search.usa.gov/signup
      * 2. Add a new site.
      * 3. Add your site/affiliate name here.
      */
     searchgov: {
-      
       // Only change this if you're using a CNAME. Learn more here: https://search.gov/manual/cname.html
       endpoint: 'https://search.usa.gov',
-      
-      // Replace this with your search.gov site handle.
-      affiliate: 'federalist-uswds-example',
-      
-      // Replace this with your access key.
-      access_key: 'xX1gtb2RcnLbIYkHAcB6IaTRr4ZfN-p16ofcyUebeko=',
-      
-      // This renders the results within the page instead of sending to user to search.gov.
-      inline: true, 
 
-      // This allows Search.gov to present relevant type-ahead search suggestions in your website's search box. 
-      // If you do not want to present search suggestions, set this value to false.
-      suggestions: true,
+      // Replace this with your search.gov site handle.
+      affiliate: 'affiliate-agency-account',
+
+      // Replace this with your access key.
+      access_key: 'affiliate-agency-account-access-key',
     },
 
     /**
      * Digital Analytics Program (DAP) configuration
-     * 
+     *
      * USAID   - Agency for International Development
      * USDA    - Department of Agriculture
      * DOC     - Department of Commerce
@@ -94,7 +86,6 @@ module.exports = {
      */
     dap: {
       // agency: 'your-agency',
-
       // Optional
       // subagency: 'your-subagency',
     },
@@ -154,7 +145,6 @@ module.exports = {
         icon: `src/images/federalist-icon.png`, // This path is relative to the root of the site.
       },
     },
-    `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-sitemap`,
     {
       resolve: 'gatsby-plugin-robots-txt',
@@ -162,14 +152,14 @@ module.exports = {
         resolveEnv: () => process.env.GATSBY_ENV,
         env: {
           development: {
-            policy: [{ userAgent: '*', disallow: ['/'] }]
+            policy: [{ userAgent: '*', disallow: ['/'] }],
           },
           production: {
-            policy: [{ userAgent: '*', allow: '/' }]
-          }
-        }
-      }
-    }
+            policy: [{ userAgent: '*', allow: '/' }],
+          },
+        },
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
