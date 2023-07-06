@@ -1,6 +1,5 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import { navigate } from '@reach/router';
 import search from 'uswds/img/usa-icons-bg/search--white.svg';
 
 const SearchForm = ({ navigation, secondaryLinks }) => {
@@ -13,25 +12,20 @@ const SearchForm = ({ navigation, secondaryLinks }) => {
             searchgov {
               affiliate
               endpoint
-              inline
             }
           }
         }
       }
     `
   );
-  const { affiliate, endpoint, inline } = site.siteMetadata.searchgov;
+  const { affiliate, endpoint } = site.siteMetadata.searchgov;
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const query = e.currentTarget.query.value;
-    if (inline) {
-      navigate(`${site.pathPrefix}/search?query=${query}`);
-    } else {
-      window.location.replace(
-        `${endpoint}/search?utf8=✓&affiliate=${affiliate}&query=${query}`
-      );
-    }
+    window.location.replace(
+      `${endpoint}/search?utf8=✓&affiliate=${affiliate}&query=${query}`
+    );
   };
 
   return (

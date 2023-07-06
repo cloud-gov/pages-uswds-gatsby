@@ -44,17 +44,11 @@ searchgov: {
   endpoint: 'https://search.usa.gov',
 
   // replace this with your search.gov account
-  affiliate: 'federalist-uswds-example',
-
-  // replace with your access key
-  access_key: 'xX1gtb2RcnLbIYkHAcB6IaTRr4ZfN-p16ofcyUebeko=',
-
-  // this renders the results within the page instead of sending to user to search.gov
-  inline: true,
+  affiliate: 'affiliate-agency-account',
 }
 ```
 
-The logic for using Search.gov can be found in the `src/components/search-form.js` component and supports displaying the results inline or sending the user to Search.gov the view the results. This setting defaults to "inline" but can be changed by setting `searchgov: { inline: false }` in `gatsby-config.js`.
+The logic for using Search.gov can be found in the `src/components/search-form.js` component and supports sending the user to Search.gov to view the results.
 
 ✅ [Digital Analytics Program (DAP)](https://digital.gov/services/dap/) integration - Once you have registered your site with DAP add your "agency" and optionally, `subagency` to `gatsby-config.js` and uncomment the appropriate lines. Ex.
 
@@ -82,6 +76,7 @@ ga: {
 ### Easy mode
 
 #### From Federalist
+
 This will create a copy of this repo in a Github repository of your choice and add it to your Federalist dashboard.
 
 - From [Federalist](https://federalistapp.18f.gov/sites) click the "+ Add Site" button.
@@ -89,6 +84,7 @@ This will create a copy of this repo in a Github repository of your choice and a
 - Follow the instructions
 
 #### From Github
+
 This will create a copy of this repo in a Github repository of your choice but you will need to add it your [Federalist dashboard](https://federalistapp.18f.gov/sites/new).
 
 - Click the "Use this template" button above or [here](https://github.com/18F/federalist-uswds-gatsby/generate).
@@ -98,12 +94,15 @@ This will create a copy of this repo in a Github repository of your choice but y
 ### Hard mode
 
 #### With `npx` (requires node)
+
     $ npx degit https://github.com/18F/federalist-uswds-gatsby#main <destination-folder>
     $ cd <destination-folder>
 
 #### Push to your Github repository
+
 - [Create a new Github repository](https://help.github.com/en/github/getting-started-with-github/create-a-repo).
 - Follow the instructions form Github or
+
 ```
     $ git init
     $ git symbolic-ref HEAD refs/heads/main
@@ -114,25 +113,30 @@ This will create a copy of this repo in a Github repository of your choice but y
 ```
 
 ### Installation for development
+
     $ git clone https://github.com/18F/federalist-uswds-gatsby
     $ cd federalist-uswds-gatsby
 
 ### Running the application
 
 #### With locally installed `node`
+
     $ npm install
     $ npm run develop
 
 To build but not serve the site, run `npm run build`.
 
 #### With Docker
+
     $ docker-compose run node npm install
     $ docker-compose up
 
 To build but not serve the site, run:
+
 ```
 docker-compose run node npm run build
 ```
+
 .
 
 Note that when built by Federalist, `npm run federalist` is used instead of
