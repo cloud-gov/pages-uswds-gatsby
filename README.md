@@ -1,12 +1,10 @@
 [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=18F/federalist-uswds-gatsby)](https://dependabot.com)
 
-# Federalist + U.S. Web Design System + Gatsby
+# cloud.gov Pages + U.S. Web Design System + Gatsby
 
-This site is developed using the [U.S. Web Design System v 2.0](https://v2.designsystem.digital.gov) and is focused on providing developers a starter kit and reference implementation for Federalist websites. You can view the [preview](https://federalist-b146cf1e-c756-4b1f-bb83-c516cac94fbb.app.cloud.gov/site/18f/federalist-uswds-gatsby/) deployed on Federalist.
+This site is developed using the [U.S. Web Design System v 2.0](https://v2.designsystem.digital.gov) and is focused on providing developers a starter kit and reference implementation for cloud.gov Pages websites. You can view the [preview](uswds-gatsby.pages.cloud.gov) deployed on cloud.gov Pages.
 
-This code uses the [Gatsby](https://www.gatsbyjs.org/) framework and built with Javascript and [React](https://reactjs.org/). If you prefer to use Ruby, check out [federalist-uswds-jekyll](https://github.com/18F/federalist-uswds-jekyll), which uses [Jekyll](https://jekyllrb.com) site engine.
-
-This project assumes that you are comfortable editing source code. If you prefer to launch a website without editing any source code, checkout [uswds-jekyll](https://github.com/18F/uswds-jekyll), which allows you to change the layout and content with configuration files.
+This code uses the [Gatsby](https://www.gatsbyjs.org/) framework and built with Javascript and [React](https://reactjs.org/).
 
 This project strives to be compliant with requirements set by [21st Century IDEA Act](https://www.meritalk.com/articles/senate-passes-idea-act/). The standards require that a website or digital service:
 
@@ -18,10 +16,6 @@ This project strives to be compliant with requirements set by [21st Century IDEA
 - “is designed around user needs with data-driven analysis influencing management and development decisions, using qualitative and quantitative data to determine user goals, needs, and behaviors, and continually test the website, web-based form, web-based application, or digital service to ensure that user needs are addressed;”
 - allows for user customization; and
 - is mobile-friendly.
-
-## 🖐Previous Versions 🖐
-
-If you're looking for the original starter that included a more integrated approach to using USWDS with React, it is still available [here](https://github.com/18F/federalist-uswds-gatsby/tree/v1), but will not be maintained.
 
 ## Features
 
@@ -35,7 +29,7 @@ If you're looking for the original starter that included a more integrated appro
 
 ✅ Customize SEO information for each page by adding the `src/components/seo.js` component to any page or template and providing the desired information. Ex. [Home page](https://github.com/18F/federalist-uswds-gatsby/blob/main/src/pages/index.js#L11).
 
-✅ [Search.gov](https://search.gov) integration - Once you have registered and configured Search.gov for your site by following [these instructions](https://federalist.18f.gov/documentation/search/), add your "affiliate" and "access key" to `gatsby-config.js`. Ex.
+✅ [Search.gov](https://search.gov) integration - Once you have registered and configured Search.gov for your site by following [these instructions](https://cloud.gov/pages/documentation/search/), add your "affiliate" and "access key" to `gatsby-config.js`. Ex.
 
 ```
 searchgov: {
@@ -72,53 +66,32 @@ ga: {
 },
 ```
 
-✅ Out-of-the-box performant caching strategy following [Gatsby recommended practices](https://www.gatsbyjs.org/docs/caching/) via `federalist.json`. See [Federalist Documentation](https://federalist.18f.gov/documentation/) for more information on `federalist.json`.
+✅ Out-of-the-box performant caching strategy following [Gatsby recommended practices](https://www.gatsbyjs.org/docs/caching/) via `pages.json`. See [cloud.gov Pages Documentation](https://cloud.gov/documentation/) for more information on `pages.json`.
 
 ## Getting Started
 
 ### Easy mode
 
-#### From Federalist
+#### From cloud.gov Pages
 
-This will create a copy of this repo in a Github repository of your choice and add it to your Federalist dashboard.
+This will create a copy of this repo in a Github repository of your choice and add it to your cloud.gov Pages dashboard.
 
-- From [Federalist](https://federalistapp.18f.gov/sites) click the "+ Add Site" button.
+- From [cloud.gov Pages](https://pages.cloud.gov/sites) click the "+ Add Site" button.
 - Click the "Use this template" button for the appropriate template
 - Follow the instructions
 
 #### From Github
 
-This will create a copy of this repo in a Github repository of your choice but you will need to add it your [Federalist dashboard](https://federalistapp.18f.gov/sites/new).
+This will create a copy of this repo in a Github repository of your choice but you will need to add it your [cloud.gov Pages dashboard](https://pages.cloud.gov/sites/new).
 
-- Click the "Use this template" button above or [here](https://github.com/18F/federalist-uswds-gatsby/generate).
+- Click the "Use this template" button above or [here](https://github.com/cloud-gov/pages-uswds-gatsby/generate).
 - Follow the instructions
-- Return to [Federalist](https://federalistapp.18f.gov/sites/new) and add the repository.
-
-### Hard mode
-
-#### With `npx` (requires node)
-
-    $ npx degit https://github.com/18F/federalist-uswds-gatsby#main <destination-folder>
-    $ cd <destination-folder>
-
-#### Push to your Github repository
-
-- [Create a new Github repository](https://help.github.com/en/github/getting-started-with-github/create-a-repo).
-- Follow the instructions form Github or
-
-```
-    $ git init
-    $ git symbolic-ref HEAD refs/heads/main
-    $ git add . && git commit -m 'Initial commit'
-    $ git remote add origin git@github.com:<your-org>/<your-repo>.git
-    (Make sure to replace `<your-org>` and `<your-repo>` above with the correct values)
-    $ git push -u origin main
-```
+- Return to [cloud.gov Pages](https://pages.cloud.gov/sites/new) and add the repository.
 
 ### Installation for development
 
-    $ git clone https://github.com/18F/federalist-uswds-gatsby
-    $ cd federalist-uswds-gatsby
+    $ git clone https://github.com/cloud-gov/pages-uswds-gatsby
+    $ cd pages-uswds-gatsby
 
 ### Running the application
 
@@ -142,7 +115,7 @@ docker-compose run node npm run build
 
 .
 
-Note that when built by Federalist, `npm run federalist` is used instead of
+Note that when built by cloud.gov Pages, `npm run pages` is used instead of
 `npm run build`.
 
 Open your web browser to [localhost:8000](http://localhost:8000/) to view your
@@ -150,7 +123,7 @@ site.
 
 _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
 
-Note that when built by Federalist, `npm run federalist` is used instead of the
+Note that when built by cloud.gov Pages, `npm run pages` is used instead of the
 `build` script.
 
 ## Technologies you should be familiarize yourself with
@@ -172,7 +145,7 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 
 ## Things to Note
 
-- The Federalist script runs the Gatsby build with the `--prefix-paths` flag. This is necessary to make sure all internal internal links point to the correct path for preview deployments.
+- The cloud.gov Pages script runs the Gatsby build with the `--prefix-paths` flag. This is necessary to make sure all internal internal links point to the correct path for preview deployments.
 - Always use the `Link` component provided by Gatsby for internal links, see previous note.
 - Importing USWDS images can be done straight from their local location in `node_modules`. See [Banner.js](https://github.com/18F/federalist-uswds-gatsby/blob/main/src/components/banner.js) for an example.
 - This is built from the default [Gatsby default starter](https://www.gatsbyjs.org/starters/gatsbyjs/gatsby-starter-default/), you can view the documentation there to see more of what is included.

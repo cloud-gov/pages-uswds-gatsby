@@ -1,6 +1,6 @@
 {
-  "name": "federalist-uswds-gatsby",
-  "description": "A Federalist template using USWDS 2.0 + Gatsby",
+  "name": "pages-uswds-gatsby",
+  "description": "A cloud.gov Pages template using USWDS 2.0 + Gatsby",
   "version": "1.0.0",
   "scripts": {
     "clean": "rimraf .cache public _site",
@@ -10,9 +10,9 @@
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "federalist": "npm run federalist:build && npm run federalist:copy",
-    "federalist:build": "gatsby build --prefix-paths",
-    "federalist:copy": "mkdir -p _site && rm -rf _site/* && cp -r public/* _site/"
+    "pages": "npm run pages:build && npm run pages:copy",
+    "pages:build": "gatsby build --prefix-paths",
+    "pages:copy": "mkdir -p _site && rm -rf _site/* && cp -r public/* _site/"
   },
   "dependencies": {
     "gatsby": "^5.11.0",
