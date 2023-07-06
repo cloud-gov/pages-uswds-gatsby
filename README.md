@@ -45,6 +45,9 @@ searchgov: {
 
   // replace this with your search.gov account
   affiliate: 'affiliate-agency-account',
+
+  // replace this with your search.gov account access key
+  access_key: 'affiliate-agency-account-access-key',
 }
 ```
 
