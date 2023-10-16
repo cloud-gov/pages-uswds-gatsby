@@ -2,7 +2,7 @@
 
 # cloud.gov Pages + U.S. Web Design System + Gatsby
 
-This site is developed using the [U.S. Web Design System v 2.0](https://v2.designsystem.digital.gov) and is focused on providing developers a starter kit and reference implementation for cloud.gov Pages websites. You can view the [preview](uswds-gatsby.pages.cloud.gov) deployed on cloud.gov Pages.
+This site is developed using the [U.S. Web Design System v 2.0](https://v2.designsystem.digital.gov) and is focused on providing developers a starter kit and reference implementation for cloud.gov Pages websites. You can view the [preview](https://uswds-gatsby.pages.cloud.gov) deployed on cloud.gov Pages.
 
 This code uses the [Gatsby](https://www.gatsbyjs.org/) framework and built with Javascript and [React](https://reactjs.org/).
 
