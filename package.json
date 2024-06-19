@@ -15,7 +15,7 @@
     "pages:copy": "mkdir -p _site && rm -rf _site/* && cp -r public/* _site/"
   },
   "dependencies": {
-    "gatsby": "^5.11.0",
+    "gatsby": "^5.13.6",
     "gatsby-awesome-pagination": "^0.3.8",
     "gatsby-plugin-manifest": "^5.11.0",
     "gatsby-plugin-offline": "^6.11.0",
