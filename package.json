@@ -15,29 +15,36 @@
     "pages:copy": "mkdir -p _site && rm -rf _site/* && cp -r public/* _site/"
   },
   "dependencies": {
-    "gatsby": "^5.11.0",
+    "gatsby": "^5.13.7",
     "gatsby-awesome-pagination": "^0.3.8",
-    "gatsby-plugin-manifest": "^5.11.0",
-    "gatsby-plugin-offline": "^6.11.0",
-    "gatsby-plugin-react-helmet": "^6.11.0",
+    "gatsby-plugin-manifest": "^5.13.1",
+    "gatsby-plugin-offline": "^6.13.3",
+    "gatsby-plugin-react-helmet": "^6.13.1",
     "gatsby-plugin-robots-txt": "^1.8.0",
-    "gatsby-plugin-sass": "^6.11.0",
-    "gatsby-plugin-sitemap": "^6.11.0",
-    "gatsby-source-filesystem": "^5.11.0",
-    "gatsby-transformer-remark": "^6.11.0",
+    "gatsby-plugin-sass": "^6.13.1",
+    "gatsby-plugin-sitemap": "^6.13.1",
+    "gatsby-source-filesystem": "^5.13.1",
+    "gatsby-transformer-remark": "^6.13.1",
     "prop-types": "^15.8.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "react-helmet": "^6.1.0",
-    "sass": "^1.51.0",
+    "sass": "^1.79.3",
     "uswds": "^2.13.3"
   },
   "devDependencies": {
     "eslint-config-react-app": "^7.0.1",
-    "prettier": "^2.5.1",
-    "rimraf": "^3.0.2"
+    "prettier": "^3.3.3",
+    "rimraf": "^6.0.1"
   },
   "engines": {
-    "node": "18.x.x"
+    "node": "^20.x.x"
+  },
+  "overrides": {
+    "axios": "^1.0.0",
+    "body-parser": "^1.20.3",
+    "path-to-regexp": "^0.1.10",
+    "postcss": "^8.4.47",
+    "webpack-dev-middleware": "^5.3.3"
   }
 }
