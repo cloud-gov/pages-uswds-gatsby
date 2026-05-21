@@ -1,5 +1,4 @@
-[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=18F/federalist-uswds-gatsby)](https://dependabot.com)
-
+# DEPRECATED - This repository is no longer in use and will not be maintained.
 # cloud.gov Pages + U.S. Web Design System + Gatsby
 
 This site is developed using the [U.S. Web Design System v 2.0](https://v2.designsystem.digital.gov) and is focused on providing developers a starter kit and reference implementation for cloud.gov Pages websites. You can view the [preview](uswds-gatsby.pages.cloud.gov) deployed on cloud.gov Pages.
